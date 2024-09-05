@@ -3,7 +3,7 @@ import Navbar from "./Components/Navbar";
 
 function App() {
   return (
-    <div className="App lg:max-w-[80%] mx-auto">
+    <div className="App">
       <Navbar />
       <Outlet />
     </div>

@@ -6,7 +6,7 @@ import Projects from "../Pages/Projects";
 const routes = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <App/>,
     children: [
       {
         index: true,

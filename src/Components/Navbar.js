@@ -58,7 +58,7 @@ useGSAP(() =>{
 
 
   return (
-    <div className="navbar bg-[#281046] max-w-screen-1xl mx-auto  shadow-lg ">
+    <div className="navbar px-36 bg-slate-400 max-w-screen-1xl mx-auto  shadow-lg ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -86,16 +86,16 @@ useGSAP(() =>{
         </div>
 
 
-        <span className="jostack text-2xl text-[#ffffff] md:uppercase font-bold ">
+        <span className="jostack text-2xl text-[#281046] md:uppercase font-bold ">
           jostack
         </span>
 
       </div>
       <div className="navbar-center  hidden lg:flex route">
-        <ul className="flex gap-10 text-[#ffffff] text-[14px] md:uppercase font-medium ">{menuitems}</ul>
+        <ul className="flex gap-10 text-[#281046] text-black md:uppercase font-medium ">{menuitems}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn min-h-1 h-9 bg-[#ffff] p-2  font-bold rounded-[10px] text-[#281046]">
+        <a className="btn btn-ghost bg-primary text-[#ffff]">
           Contact
         </a>
       </div>

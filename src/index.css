@@ -2,29 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* #html {
   background-color: #e4e4e4;
 } */
 
-@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
 
-.nerko{
+.nerko {
   font-family: "Nerko One", system-ui;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
-
-.grotesk{
+.grotesk {
   font-family: "Space Grotesk", sans-serif;
-
 }
 
 body {
   color: black;
   margin: 0;
-  font-family: "Poppins", "sans-serif",;
+  font-family: "Poppins", "sans-serif";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -33,6 +30,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-
-

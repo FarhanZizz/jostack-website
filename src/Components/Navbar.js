@@ -1,70 +1,51 @@
-
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap"; 
-// 
+import gsap from "gsap";
+
+//
 import React, { useEffect } from "react";
-import { NavLink } from "react-router-dom";
-
-
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const menuitems = (
-    <>
-      <li
-        className="home border-b-3 border-transparent relative transition-all duration-600 ease-linear 
-              after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:bg-[#ffff]
-              after:w-0 after:transition-all hover:after:w-full p-1  "
-      >
-        <NavLink to="/">Home</NavLink>
-      </li>
+  //  using gsap in navbar //
 
-      <li
-        className="border-b-3 border-transparent relative transition-all duration-600 ease-linear 
-              after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:bg-[#ffff] 
-              after:w-0 after:transition-all hover:after:w-full p-1  "
-      >
-        <NavLink to="/projects">Projects</NavLink>
-      </li>
-    </>
-    
-  );
+  const tl = gsap.timeline();
+  useGSAP(() => {
+    gsap.from(".navbar-end", {
+      y: -10,
+      opacity: 0,
+      duration: 0.6,
+      delay: 1,
+    });
 
-//  using gsap in navbar //
+    gsap.from(".jostack", {
+      y: -10,
+      opacity: 0,
+      duration: 0.6,
+      delay: 0.3,
+    });
+    gsap.from(".hamburger", {
+      y: -10,
+      opacity: 0,
+      duration: 0.6,
+      delay: 0.3,
+    });
 
-const tl = gsap.timeline() ; 
-useGSAP(() =>{
-   gsap.from('.navbar-end',{
-    y:-10 ,
-    opacity : 0 ,
-    duration : 1 ,
-    delay : 1
-   }) ;
-
-   gsap.from('.jostack',{
-    y:-10 ,
-    opacity : 0 ,
-    duration : 1 ,
-    delay : 0.3
-  }) ;
-
-  gsap.from('.route',{
-    y:-10 ,
-    opacity : 0 ,
-    duration : 1 ,
-    delay : 0.7
-  }) ;
-
-}) ;
-
+    gsap.from(".route", {
+      y: -10,
+      opacity: 0,
+      duration: 0.6,
+      delay: 0.7,
+    });
+  });
 
   return (
-    <div className="navbar px-36 bg-slate-400 max-w-screen-1xl mx-auto  shadow-lg ">
+    <div className="navbar md:px-8 lg:px-36 bg-[#F5F5DC]  shadow-lg ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-5 w-5 hamburger"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -81,23 +62,44 @@ useGSAP(() =>{
             tabIndex={0}
             className="menu dropdown-content bg-primary text-white rounded-box z-[1] mt-3 w-40 p-2 shadow"
           >
-            {menuitems}
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
+
+            <li>
+              <NavLink to="/projects">Projects</NavLink>
+            </li>
           </ul>
         </div>
 
-
-        <span className="jostack text-2xl text-[#281046] md:uppercase font-bold ">
+        <Link
+          to="/"
+          className="jostack text-2xl text-primary uppercase font-bold "
+        >
           jostack
-        </span>
-
+        </Link>
       </div>
       <div className="navbar-center  hidden lg:flex route">
-        <ul className="flex gap-10 text-[#281046] text-black md:uppercase font-medium ">{menuitems}</ul>
+        <ul className="flex gap-10 text-primary  uppercase font-medium ">
+          <li
+            className="home border-b-3 border-transparent relative transition-all duration-600 ease-linear 
+              after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:bg-primary
+              after:w-0 after:transition-all hover:after:w-full p-1  "
+          >
+            <NavLink to="/">Home</NavLink>
+          </li>
+
+          <li
+            className="border-b-3 border-transparent relative transition-all duration-600 ease-linear 
+              after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:bg-primary 
+              after:w-0 after:transition-all hover:after:w-full p-1  "
+          >
+            <NavLink to="/projects">Projects</NavLink>
+          </li>
+        </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn btn-ghost bg-primary text-[#ffff]">
-          Contact
-        </a>
+        <a className="btn btn-ghost bg-primary text-white">Contact</a>
       </div>
     </div>
   );

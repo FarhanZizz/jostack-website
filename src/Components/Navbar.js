@@ -1,4 +1,5 @@
 import { useGSAP } from "@gsap/react";
+import { FaArrowAltCircleRight } from "react-icons/fa";
 import gsap from "gsap";
 
 //
@@ -39,7 +40,7 @@ const Navbar = () => {
   });
 
   return (
-    <div className="navbar md:px-8 lg:px-36 bg-[#F5F5DC]  shadow-lg ">
+    <div className="navbar md:px-8 lg:px-16 bg-[#cccccc]  shadow-lg ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -74,7 +75,7 @@ const Navbar = () => {
 
         <Link
           to="/"
-          className="jostack text-2xl text-primary uppercase font-bold "
+          className="jostack grostesk text-2xl text-primary uppercase font-bold "
         >
           jostack
         </Link>
@@ -99,7 +100,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn btn-ghost bg-primary text-white">Contact</a>
+        <a className="rounded-3xl text-[#000] text-white flex items-center gap-3">Contact <FaArrowAltCircleRight /></a>
       </div>
     </div>
   );

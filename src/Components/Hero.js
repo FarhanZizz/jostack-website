@@ -5,18 +5,11 @@ import React from "react";
 import bannerimg from "../assets/banner_img.png";
 const Hero = () => {
   useGSAP(() => {
-    gsap.from(".hero-title p ", {
+    gsap.from(".hero-title h1 ", {
       y: 50,
       opacity: 0,
       duration: 1.6,
       delay: 0.5,
-      stagger: 0.3,
-    });
-    gsap.from(".hero-details h1", {
-      y: 50,
-      opacity: 0,
-      duration: 1.6,
-      delay: 0.7,
       stagger: 0.3,
     });
     gsap.from(".hero-details p", {
@@ -26,6 +19,13 @@ const Hero = () => {
       delay: 0.7,
       stagger: 0.3,
     });
+    // gsap.from("", {
+    //   y: 50,
+    //   opacity: 0,
+    //   duration: 1.6,
+    //   delay: 0.7,
+    //   stagger: 0.3,
+    // });
     gsap.from(".btn-hero ", {
       x: -10,
       opacity: 0,
@@ -35,16 +35,16 @@ const Hero = () => {
   });
 
   return (
-    <div className="hero-section bg-[rgb(245,245,220)] p-10 flex items-center  flex-col-reverse lg:flex-row ">
-      <div className="text-container grotesk">
-        <div className="hero-title space-y-6 mt-10">
-          <p className="text-3xl md:text-6xl md:uppercase font-bold leading-10">
-            <span className="block md:inline">Transforming ideas</span>
+    <div className="hero-section bg-[#cccccc] p-24 flex items-center    ">
+      {/* <div className="text-container grotesk">
+        <div className="hero-title text-7xl space-y-9 mt-10">
+          <p className=" text-[] md:text-6xl md:uppercase font-bold leading-10">
+            <span className=" text-9xl block md:inline">Transforming ideas</span>
             <span className="hidden md:inline">
               {" "}
               <br />{" "}
             </span>
-            <span className="block md:inline">into digital</span>
+            <span className="text-8xl block md:inline">into digital</span>
             <span className="hidden md:inline">
               {" "}
               <br />{" "}
@@ -73,12 +73,28 @@ const Hero = () => {
             IT services designed to elevate your business in the digital world.
           </p>
         </div>
-        <button className="btn-hero rounded-3xl uppercase flex gap-1 items-center btn-ghost mt-10 bg-primary text-[#FFFF] p-4 ">
+       
+      </div> */}
+      {/* <img className=" md:max-w-xl lg:mx-auto" src={bannerimg}></img> */}
+
+    <div className=" hero-title grotesk ">
+      <h1 className="text-9xl font-bold "> TRANSFORMING IDEAS </h1>
+      <h1 className="text-9xl font-bold  ">INTO DIGITAL </h1>
+      <h1 className="text-9xl font-bold  ">REALITY</h1>
+      
+    </div>
+
+    <div className="hero-details mt-[300px] text-[14px] space-y-2">
+    <p>At Jostack, we transform your ideas into digital reality with expert
+    website</p>
+    <p>creation, management and branding. Explore our wide range of IT services</p>
+    <p> designed to elevate your business in the digital world.</p>
+    <div>
+    <button className="btn-hero rounded-xl uppercase flex gap-1 items-center btn-ghost mt-10 bg-primary text-[#FFFF] text-[14px] px-5 py-2 ">
           contact us <FaLongArrowAltRight />{" "}
         </button>
-      </div>
-
-      <img className=" md:max-w-xl lg:mx-auto" src={bannerimg}></img>
+    </div>
+    </div>
     </div>
   );
 };

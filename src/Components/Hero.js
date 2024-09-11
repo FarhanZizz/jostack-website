@@ -2,7 +2,8 @@ import { useGSAP } from "@gsap/react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import gsap from "gsap";
 import React from "react";
-import bannerimg from "../assets/banner_img.png";
+import Lottie from "react-lottie";
+import animationData from "../assets/circle.json";
 const Hero = () => {
   useGSAP(() => {
     gsap.from(".hero-title h1 ", {
@@ -33,6 +34,14 @@ const Hero = () => {
       delay: 3,
     });
   });
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
   return (
     <div className="hero-section bg-[#cccccc] py-48 px-24 flex items-center ">
@@ -77,25 +86,29 @@ const Hero = () => {
       </div> */}
       {/* <img className=" md:max-w-xl lg:mx-auto" src={bannerimg}></img> */}
 
-    <div className=" hero-title grotesk ">
-      <h1 className="text-9xl font-bold "> TRANSFORMING IDEAS </h1>
-      <h1 className="text-9xl font-bold  ">INTO DIGITAL </h1>
-      <h1 className="text-9xl font-bold  ">REALITY</h1>
-      
-    </div>
+      <div className=" hero-title grotesk ">
+        <h1 className="text-9xl font-bold "> TRANSFORMING IDEAS </h1>
+        <h1 className="text-9xl font-bold  ">INTO DIGITAL </h1>
+        <h1 className="text-9xl font-bold  ">REALITY</h1>
+      </div>
 
-    <div className="hero-details mt-[300px] text-[14px] space-y-2">
-      
-    <p>At Jostack, we transform your ideas into digital reality with expert
-    website</p>
-    <p>creation, management and branding. Explore our wide range of IT services</p>
-    <p> designed to elevate your business in the digital world.</p>
-    <div>
-    <button className="btn-hero rounded-xl uppercase flex gap-1 items-center btn-ghost mt-10 bg-primary text-[#FFFF] text-[14px] px-5 py-2 ">
-          contact us <FaLongArrowAltRight />{" "}
-        </button>
-    </div>
-    </div>
+      <div className="hero-details mt-[300px] text-[14px] space-y-2">
+        <Lottie options={defaultOptions} height={300} width={300} />
+        <p>
+          At Jostack, we transform your ideas into digital reality with expert
+          website
+        </p>
+        <p>
+          creation, management and branding. Explore our wide range of IT
+          services
+        </p>
+        <p> designed to elevate your business in the digital world.</p>
+        <div>
+          <button className="btn-hero rounded-xl uppercase flex gap-1 items-center btn-ghost mt-10 bg-primary text-[#FFFF] text-[14px] px-5 py-2 ">
+            contact us <FaLongArrowAltRight />{" "}
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

@@ -92,7 +92,7 @@ const Hero = () => {
         <h1 className="text-9xl font-bold  ">REALITY</h1>
       </div>
 
-      <div className="hero-details mt-[300px] text-[14px] space-y-2">
+      <div className="hero-details  text-[14px] space-y-2">
         <Lottie options={defaultOptions} height={300} width={300} />
         <p>
           At Jostack, we transform your ideas into digital reality with expert

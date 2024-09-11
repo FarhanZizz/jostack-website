@@ -46,7 +46,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="hero-section bg-[#cccccc] py-48 px-24 flex items-center ">
+    <div className="hero-section p-52 bg-[#cccccc]  flex justify-between  ">
       {/* <div className="text-container grotesk">
         <div className="hero-title text-7xl space-y-9 mt-10">
           <p className=" text-[] md:text-6xl md:uppercase font-bold leading-10">
@@ -94,7 +94,7 @@ const Hero = () => {
         <h1 className="text-9xl font-bold  ">REALITY</h1>
       </div>
 
-      <div className="hero-details mt-[300px] text-[14px] space-y-2">
+      <div className="hero-details  text-[14px] space-y-2">
         <Lottie options={defaultOptions} height={300} width={300} />
         <p>
           At Jostack, we transform your ideas into digital reality with expert

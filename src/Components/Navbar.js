@@ -100,7 +100,9 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="rounded-3xl text-[#000] text-white flex items-center gap-3">Contact <FaArrowAltCircleRight /></a>
+        <a className="rounded-3xl text-[#000] text-white flex items-center gap-3">
+          Contact <FaArrowAltCircleRight />
+        </a>
       </div>
     </div>
   );

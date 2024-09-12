@@ -4,7 +4,8 @@ import gsap from "gsap";
 import Lottie from "react-lottie";
 import animationData from "../assets/circle.json";
 import React from "react";
-import bannerimg from "../assets/banner_img.png";
+// import Lottie from "react-lottie";
+// import animationData from "../assets/circle.json";
 const Hero = () => {
   useGSAP(() => {
     gsap.from(".hero-title h1 ", {
@@ -35,6 +36,14 @@ const Hero = () => {
       delay: 3,
     });
   });
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: animationData,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
 
   const defaultOptions = {
     loop: true,
@@ -46,7 +55,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="hero-section p-52 bg-[#cccccc]  flex justify-between  ">
+    <div className="hero-section max-w-[1500px] mx-auto bg-[#cccccc]  flex justify-between  py-36 ">
       {/* <div className="text-container grotesk">
         <div className="hero-title text-7xl space-y-9 mt-10">
           <p className=" text-[] md:text-6xl md:uppercase font-bold leading-10">
@@ -94,8 +103,10 @@ const Hero = () => {
         <h1 className="text-9xl font-bold  ">REALITY</h1>
       </div>
 
-      <div className="hero-details  text-[14px] space-y-2">
-        <Lottie options={defaultOptions} height={300} width={300} />
+      <div className="hero-details   text-[14px] space-y-2">
+      <div className="mb-32">
+      <Lottie options={defaultOptions} height={300} width={300} />
+      </div>
         <p>
           At Jostack, we transform your ideas into digital reality with expert
           website

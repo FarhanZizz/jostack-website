@@ -30,3 +30,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.card1{
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)) ,url(./assets/Card.0.1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+.card2{
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)) ,url(./assets/card2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+.card3{
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)) ,url(./assets/card3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}

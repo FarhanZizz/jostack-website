@@ -55,7 +55,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="hero-section max-w-[1500px] mx-auto bg-[#cccccc]  flex justify-between  py-36 ">
+    <div className="hero-section max-w-[1500px] mx-auto bg-[#cccccc]  flex justify-between  py-40 ">
       {/* <div className="text-container grotesk">
         <div className="hero-title text-7xl space-y-9 mt-10">
           <p className=" text-[] md:text-6xl md:uppercase font-bold leading-10">
@@ -97,7 +97,7 @@ const Hero = () => {
       </div> */}
       {/* <img className=" md:max-w-xl lg:mx-auto" src={bannerimg}></img> */}
 
-      <div className=" hero-title grotesk ">
+      <div className=" hero-title mt-10 grotesk ">
         <h1 className="text-9xl font-bold "> TRANSFORMING IDEAS </h1>
         <h1 className="text-9xl font-bold  ">INTO DIGITAL </h1>
         <h1 className="text-9xl font-bold  ">REALITY</h1>

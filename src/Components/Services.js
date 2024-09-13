@@ -14,18 +14,21 @@ const Services = () => {
 
 
  return (
-  <section className='flex gap-14  p-5  items-center justify-center'>
-   <div className='h-[650px] w-[450px] bg-red-400'>
-    
-   </div>
-
-   <div className='h-[650px] w-[450px] bg-red-400'>
+  <div>
+  <div  className='p-9 md:uppercase text-[50px] font-bold tracking-wider grotesk'>our services</div>
+  <section className='flex    p-10  items-center justify-between'>
+   <div className='card1 h-[650px] w-[510px] bg-red-400 rounded-xl  '>
 
    </div>
-   <div className='h-[650px] w-[450px] bg-red-400'>
+
+   <div className='card2 h-[650px] w-[510px] bg-red-400 rounded-xl'>
+
+   </div>
+   <div className='card3 h-[650px] w-[510px] bg-red-400 rounded-xl'>
 
    </div>
   </section>
+  </div>
  );
 };
 

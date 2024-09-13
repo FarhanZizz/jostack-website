@@ -6,6 +6,15 @@
   background-color: #cccccc;
 }
 
+html, body {
+  overflow: hidden;
+  height: 100%;
+}
+
+[data-scroll-container] {
+  overflow: hidden;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
 
 .nerko {

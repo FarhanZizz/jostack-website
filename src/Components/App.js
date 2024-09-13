@@ -40,10 +40,8 @@ const About = () => {
   return (
     <>
       <section className="Container-about py-24  bg-[#000] max-w-[1630px] rounded-3xl mx-auto shadow-xl ">
-
         {/* title of about section */}
         <div className=" mt-5 ">
-      
           <div className="items-end">
             <p className="about-title  grotesk text-[5px]  font-semibold mt-3 flex items-center mr-44 flex-row-reverse gap-5 align-right text-[#fff]  ">
               {" "}
@@ -56,11 +54,11 @@ const About = () => {
           <div className="about-details p-28 space-y-6 text-[26px] md:capitalize max-w-[1700px]">
             <p className="text-[#fff]">
               Our commitment to clients is rooted in strong, transparent
-              relationships and a deep understanding of {" "}
+              relationships and a deep understanding of{" "}
             </p>
             <p className="text-[#fff]">
-             their unique needs. We collaborate closely to bring your ideas to life,
-              leveraging our expertise in branding ,{" "}
+              their unique needs. We collaborate closely to bring your ideas to
+              life, leveraging our expertise in branding ,{" "}
             </p>
             <p className="text-[#fff]">
               website development, and digital marketing to create tailored

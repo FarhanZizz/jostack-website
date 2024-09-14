@@ -15,7 +15,7 @@ const About = () => {
         // toggleActions:"restart pause reverse none "
         scroller: "body",
         // markers: true ,
-        start: "top 100%",
+        start: "top 120%",
         scrub: 1,
       },
       // scale:0,
@@ -27,7 +27,8 @@ const About = () => {
     gsap.from(".about-details p", {
       scrollTrigger: {
         trigger: ".about-details p",
-        start: "top 100%",
+        start: "top 120%",
+        // markers : true ,
       },
       y: 50,
       opacity: 0,

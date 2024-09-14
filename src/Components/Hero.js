@@ -33,7 +33,7 @@ const Hero = () => {
       x: -10,
       opacity: 0,
       duration: 1.6,
-      delay: 3,
+      delay: 2,
     });
   });
   // const defaultOptions = {

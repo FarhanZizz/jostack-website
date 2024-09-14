@@ -5,7 +5,7 @@ const Newsletter = () => {
   return (
     <div className="relative my-72">
       <div className="bg-primary ">
-        <h1 className="text-7xl text-black font-bold relative px-12  z-20">
+        <h1 className="text-7xl text-black font-bold relative px-12  z-20  grotesk">
           Let’s work together!
         </h1>
         <svg

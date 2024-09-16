@@ -4,12 +4,13 @@ import Services from "../Components/Services";
 
 import Newsletter from "../Components/Newsletter";
 import About from "../Components/About";
+import Faq from "../Components/Faq";
 const Home = () => {
   return (
     <div>
-      <Hero></Hero>
-      <About></About>
-      <Services/>
+      <Hero />
+      <About />
+      <Services />
       <Newsletter />
     </div>
   );

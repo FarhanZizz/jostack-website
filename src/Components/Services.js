@@ -6,7 +6,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { useEffect, useRef } from "react";
 
-//
 const Services = () => {
   const [text] = useTypewriter({
     words: ["Our", "Services"],
@@ -17,7 +16,6 @@ const Services = () => {
   });
 
   // gsap //
-
   useGSAP(() => {
     gsap.from(".div-1", {
       scrollTrigger: {
@@ -29,44 +27,58 @@ const Services = () => {
       y: -200,
     });
   });
- // 
- const exploreRef = useRef(null);
- useEffect(() => {
-    const handleMouseMove = (dets) => {
-      // Use GSAP to animate the element on mousemove
-      gsap.to(exploreRef.current, {
-        left: dets.clientX-20,  // Use clientX and clientY for mouse position
-        top: dets.clientY-20,
-        duration: 0.2, 
-        ease: "power2.out",     // Optional: Add smoothness with duration
-      });
+
+  const exploreRef = useRef(null);
+  const serviceRef = useRef(null); // Reference for the service component
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const { clientX, clientY } = e;
+      const serviceRect = serviceRef.current.getBoundingClientRect();
+
+      // Calculate the mouse position relative to the component
+      const xPos = clientX - serviceRect.left - 20;
+      const yPos = clientY - serviceRect.top - 20;
+
+      // Ensure the ball only follows the cursor inside the component
+      if (
+        xPos > 0 &&
+        xPos < serviceRect.width &&
+        yPos > 0 &&
+        yPos < serviceRect.height
+      ) {
+        gsap.to(exploreRef.current, {
+          left: xPos,
+          top: yPos,
+          duration: 0.2,
+          ease: "power2.out",
+        });
+      }
     };
 
-    // Add event listener on mount
-    window.addEventListener("mousemove", handleMouseMove);
+    // Attach the event listener to the specific component
+    const serviceElement = serviceRef.current;
+    serviceElement.addEventListener("mousemove", handleMouseMove);
 
     // Cleanup event listener on unmount
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
+      serviceElement.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
   return (
-
-   
-    <div className="service "  >
-
+    <div className="service relative" ref={serviceRef}>
       <div className="service-title  p-9 md:capitalize  text-[40px] font-bold  grotek flex items-center justify-center gap-5 mt-10 ">
         Explore<span className="text-primary"> {text}</span>
       </div>
-
-     
-
-      <section className="flex  p-10  items-center justify-between mt-10"  >
-      
-      <div className=" explore bg-[#000] py-10 px-6  fixed rounded-full"  ref={exploreRef}>
-     <p className="text-white">Explore</p>
-    </div>
+      <section className="flex  p-10  items-center justify-between mt-10">
+        <div
+          className=" explore bg-[#000] py-10 px-6  absolute rounded-full z-30"
+          ref={exploreRef}
+          style={{ left: 0, top: 0 }}
+        >
+          <p className="text-white">Explore</p>
+        </div>
 
         <div className="card1 h-[650px] w-[510px] bg-red-400 rounded-xl flex items-center justify-center">
           <div className=" div-1 px-10 py-3 bg-[#fcebd6] rounded-3xl flex gap-24 ">
@@ -79,8 +91,6 @@ const Services = () => {
           </div>
         </div>
 
-        {/*  */}
-
         <div className="card2 h-[650px] w-[510px] bg-red-400 rounded-xl flex items-center justify-center">
           <div className=" div-1 px-10 py-3 bg-[#fcebd6] rounded-3xl flex gap-24">
             <span className="font-bold text-primary text-[15px] capitalize cursor-pointer">
@@ -91,8 +101,6 @@ const Services = () => {
             </span>
           </div>
         </div>
-
-        {/*  */}
 
         <div className="card3 h-[650px] w-[510px] bg-red-400 rounded-xl flex items-center justify-center">
           <div className=" div-1 px-10 py-3 bg-[#fcebd6] rounded-3xl flex gap-24">

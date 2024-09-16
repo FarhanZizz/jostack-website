@@ -37,8 +37,8 @@ const Services = () => {
       const serviceRect = serviceRef.current.getBoundingClientRect();
 
       // Calculate the mouse position relative to the component
-      const xPos = clientX - serviceRect.left - 20;
-      const yPos = clientY - serviceRect.top - 20;
+      const xPos = clientX - serviceRect.left ;
+      const yPos = clientY - serviceRect.top ;
 
       // Ensure the ball only follows the cursor inside the component
       if (
@@ -73,7 +73,7 @@ const Services = () => {
       </div>
       <section className="flex  p-10  items-center justify-between mt-10">
         <div
-          className=" explore bg-[#000] py-10 px-6  absolute rounded-full z-30"
+          className=" explore bg-[#0000006b] px-5 py-10 border border-[#fff] grotesk font-bold text-[20px] absolute rounded-full z-30"
           ref={exploreRef}
           style={{ left: 0, top: 0 }}
         >

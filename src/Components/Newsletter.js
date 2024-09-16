@@ -4,7 +4,7 @@ import { FaLinkedinIn, FaWhatsapp, FaTelegram } from "react-icons/fa";
 const Newsletter = () => {
   return (
     <div className="relative my-72">
-      <div className="bg-primary ">
+      <div className="bg-[#fff] ">
         <h1 className="text-7xl text-black font-bold relative px-12  z-20  grotesk">
           Let’s work together!
         </h1>
@@ -47,8 +47,8 @@ const Newsletter = () => {
             </div> */}
           </div>
           <div>
-            <p className="text-white text-3xl">Want to stay in the loop?</p>
-            <h1 className="text-5xl font-bold text-white mt-5 leading-relaxed">
+            <p className="text-[#000] text-3xl">Want to stay in the loop?</p>
+            <h1 className="text-5xl font-bold text-black mt-5 leading-relaxed">
               Drop your email to get latest updates from Jostack
             </h1>
             <div className="flex items-center mt-8">

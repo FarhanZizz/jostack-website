@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { useEffect, useRef } from "react";
 
 //
 const Services = () => {
@@ -28,14 +29,45 @@ const Services = () => {
       y: -200,
     });
   });
+ // 
+ const exploreRef = useRef(null);
+ useEffect(() => {
+    const handleMouseMove = (dets) => {
+      // Use GSAP to animate the element on mousemove
+      gsap.to(exploreRef.current, {
+        left: dets.clientX-20,  // Use clientX and clientY for mouse position
+        top: dets.clientY-20,
+        duration: 0.2, 
+        ease: "power2.out",     // Optional: Add smoothness with duration
+      });
+    };
+
+    // Add event listener on mount
+    window.addEventListener("mousemove", handleMouseMove);
+
+    // Cleanup event listener on unmount
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
 
   return (
-    <div className="mt-16">
+
+   
+    <div className="service "  >
+
       <div className="service-title  p-9 md:capitalize  text-[40px] font-bold  grotek flex items-center justify-center gap-5 mt-10 ">
         Explore<span className="text-primary"> {text}</span>
       </div>
 
-      <section className="flex  p-10  items-center justify-between mt-10">
+     
+
+      <section className="flex  p-10  items-center justify-between mt-10"  >
+      
+      <div className=" explore bg-[#000] py-10 px-6  fixed rounded-full"  ref={exploreRef}>
+     <p className="text-white">Explore</p>
+    </div>
+
         <div className="card1 h-[650px] w-[510px] bg-red-400 rounded-xl flex items-center justify-center">
           <div className=" div-1 px-10 py-3 bg-[#fcebd6] rounded-3xl flex gap-24 ">
             <span className="font-bold text-primary text-[15px] capitalize cursor-pointer">

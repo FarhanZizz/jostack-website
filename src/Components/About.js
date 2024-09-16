@@ -12,23 +12,17 @@ const About = () => {
     gsap.to(".about-title", {
       scrollTrigger: {
         trigger: ".about-title",
-        // toggleActions:"restart pause reverse none "
-        scroller: "body",
-        // markers: true ,
+        scroller: ".smooth-scroll",
         start: "top 120%",
-        scrub: 1,
+        scrub: true,
       },
-      // scale:0,
       fontSize: 100,
-      // duration: 3,
-      // delay: 2,
-      // duration: 0.7 ,
     });
     gsap.from(".about-details p", {
       scrollTrigger: {
         trigger: ".about-details p",
         start: "top 120%",
-        // markers : true ,
+        scroller: ".smooth-scroll",
       },
       y: 50,
       opacity: 0,

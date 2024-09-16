@@ -6,11 +6,6 @@
   background-color: #cccccc;
 }
 
-html, body {
-  /* overflow: hidden; */
-  height: 100%;
-}
-
 [data-scroll-container] {
   overflow: hidden;
 }

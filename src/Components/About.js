@@ -20,8 +20,8 @@ const About = () => {
       },
       // scale:0,
       fontSize: 100,
-      duration: 3,
-      delay: 2,
+      // duration: 3,
+      // delay: 2,
       // duration: 0.7 ,
     });
     gsap.from(".about-details p", {

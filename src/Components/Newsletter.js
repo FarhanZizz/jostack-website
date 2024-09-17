@@ -3,8 +3,8 @@ import { FaLinkedinIn, FaWhatsapp, FaTelegram } from "react-icons/fa";
 
 const Newsletter = () => {
   return (
-    <div className="relative my-72">
-      <div className="bg-[#fff] ">
+    <div className="relative mt-40">
+      <div className="bg-[#957dad] ">
         <h1 className="text-7xl text-black font-bold relative px-12  z-20  grotesk">
           Let’s work together!
         </h1>

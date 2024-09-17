@@ -21,7 +21,7 @@ const Services = () => {
       scrollTrigger: {
         trigger: ".div-1",
         start: "top 100%",
-        scroller: "[data-scroll-container]",
+        scroller: ".smooth-scroll",
         scrub: 1,
       },
       y: -200,
@@ -37,8 +37,8 @@ const Services = () => {
       const serviceRect = serviceRef.current.getBoundingClientRect();
 
       // Calculate the mouse position relative to the component
-      const xPos = clientX - serviceRect.left ;
-      const yPos = clientY - serviceRect.top ;
+      const xPos = clientX - serviceRect.left;
+      const yPos = clientY - serviceRect.top;
 
       // Ensure the ball only follows the cursor inside the component
       if (

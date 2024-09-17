@@ -10,6 +10,11 @@
   overflow: hidden;
 }
 
+html,body {
+  overflow: hidden;
+  height: 100%
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
 
 .nerko {

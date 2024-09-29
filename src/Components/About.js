@@ -14,6 +14,8 @@ const About = () => {
         trigger: ".about-title",
         scroller: ".smooth-scroll",
         start: "top 120%",
+        // end : "top 125%",
+        markers : true ,
         scrub: true,
       },
       fontSize: 100,
@@ -21,7 +23,7 @@ const About = () => {
     gsap.from(".about-details p", {
       scrollTrigger: {
         trigger: ".about-details p",
-        start: "top 120%",
+        start: "top 130%",
         scroller: ".smooth-scroll",
       },
       y: 50,
@@ -34,7 +36,7 @@ const About = () => {
 
   return (
     <>
-      <section className="Container-about py-24  bg-[#000] max-w-[1630px] rounded-3xl mx-auto shadow-xl ">
+      <section className="Container-about py-24  bg-[#000] max-w-[1630px] rounded-3xl mx-auto shadow-xl mt-24 ">
         {/* title of about section */}
         <div className=" mt-5 ">
           <div className="items-end">

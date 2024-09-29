@@ -58,7 +58,7 @@ const Faq = () => {
               <Lottie options={defaultOptions} />
             </div>
           </div>
-          <div className="chat-bubble text-3xl chat-bubble-primary text-white">
+          <div className="chat-bubble text-3xl chat-bubble-primary text-white grotesk">
             But I still have questions about your services.
           </div>
         </div>

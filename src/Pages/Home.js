@@ -11,8 +11,8 @@ const Home = () => {
       <Hero />
       <About />
       <Services />
-      <Newsletter />
       <Faq />
+      <Newsletter />
     </div>
   );
 };

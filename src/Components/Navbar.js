@@ -8,8 +8,6 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   //  using gsap in navbar //
-
-  const tl = gsap.timeline();
   useGSAP(() => {
     gsap.from(".navbar-end", {
       y: -10,
@@ -37,6 +35,7 @@ const Navbar = () => {
       duration: 0.6,
       delay: 0.7,
     });
+   
   });
 
   return (
@@ -46,7 +45,7 @@ const Navbar = () => {
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 hamburger"
+              className="svg h-5 w-5 hamburger"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -100,7 +99,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="rounded-3xl text-[#000] text-white flex items-center gap-3">
+        <a className="rounded-3x bg-primary px-3 py-1 rounded-xl text-white flex items-center gap-3">
           Contact <FaArrowAltCircleRight />
         </a>
       </div>

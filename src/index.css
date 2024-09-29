@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 #html {
-  background-color: #cccccc;
+  background-color: #ffff;
 }
 
 [data-scroll-container] {
@@ -44,7 +44,7 @@ code {
 
 
 .card1{
-  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)) ,url(./assets/Card.0.1.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(./assets/Card.0.1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

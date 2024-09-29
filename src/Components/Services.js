@@ -8,7 +8,7 @@ import { useEffect, useRef } from "react";
 
 const Services = () => {
   const [text] = useTypewriter({
-    words: ["Our", "Services"],
+    words: ["Our Services"],
     loop: {},
     typeSpeed: 100,
     deleteSpeed: 50,
@@ -26,6 +26,18 @@ const Services = () => {
       },
       y: -200,
     });
+
+    gsap.from('service-title',{
+     scrollTrigger:{
+      trigger  : 'service-title' , 
+      // start : "top 100%"  ,
+      scroller : ".smooth-scroll",
+      // markers : true ,
+      scrub : 1
+     } ,
+     y : 20 ,
+     opacity : 0
+    })
   });
 
   const exploreRef = useRef(null);
@@ -67,47 +79,38 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="service relative" ref={serviceRef}>
-      <div className="service-title  p-9 md:capitalize  text-[40px] font-bold  grotek flex items-center justify-center gap-5 mt-10 ">
+    <div className="service relative mt-32" ref={serviceRef}>
+      <div className="service-title   p-9 md:capitalize  text-[60px] font-bold  grotek flex items-center justify-center gap-5 ">
         Explore<span className="text-primary"> {text}</span>
       </div>
-      <section className="flex  p-10  items-center justify-between mt-10">
+      <section className="flex  gap-1 px-1  items-center justify-between mt-10">
         <div
-          className=" explore bg-[#0000006b] px-5 py-10 border border-[#fff] grotesk font-bold text-[20px] absolute rounded-full z-30"
+          className=" explore bg-[#000000e7] px-5 py-10 border border-[#fff] grotesk font-bold text-[20px] absolute rounded-full z-30"
           ref={exploreRef}
           style={{ left: 0, top: 0 }}
         >
           <p className="text-white">Explore</p>
         </div>
 
-        <div className="card1 h-[650px] w-[510px] bg-red-400 rounded-xl flex items-center justify-center">
-          <div className=" div-1 px-10 py-3 bg-[#fcebd6] rounded-3xl flex gap-24 ">
-            <span className="font-bold text-primary text-[15px] capitalize cursor-pointer">
-              contact
-            </span>
-            <span className="font-bold text-primary text-[15px] capitalize flex items-center  gap-1 cursor-pointer ">
+        <div className="card1 h-[750px] w-[610px] bg-red-400  flex items-center justify-center rounded-md">
+          <div className=" div-1 px-16 py-3 bg-[#f9f8f6f2] rounded-3xl flex gap-24  border border-[#000] ">
+            <span className="font-bold text-primary md:uppercase grotesk text-[20px] capitalize flex items-center  gap-1 cursor-pointer ">
               web Building <FaLongArrowAltRight />
             </span>
           </div>
         </div>
-
-        <div className="card2 h-[650px] w-[510px] bg-red-400 rounded-xl flex items-center justify-center">
-          <div className=" div-1 px-10 py-3 bg-[#fcebd6] rounded-3xl flex gap-24">
-            <span className="font-bold text-primary text-[15px] capitalize cursor-pointer">
-              contact
-            </span>
-            <span className="font-bold text-primary text-[15px] capitalize flex items-center gap-1 cursor-pointer ">
+  
+        <div className="card2  h-[750px] w-[610px] bg-red-400  flex items-center justify-center rounded-md">
+          <div className=" div-1 px-16 py-3 bg-[#f9f8f6c0] rounded-3xl flex gap-24  border border-[#000] ">
+            <span className="font-bold text-primary md:uppercase grotesk text-[20px] capitalize flex items-center  gap-1 cursor-pointer ">
               Branding <FaLongArrowAltRight />
             </span>
           </div>
         </div>
 
-        <div className="card3 h-[650px] w-[510px] bg-red-400 rounded-xl flex items-center justify-center">
-          <div className=" div-1 px-10 py-3 bg-[#fcebd6] rounded-3xl flex gap-24">
-            <span className="font-bold text-primary text-[15px] capitalize cursor-pointer ">
-              contact
-            </span>
-            <span className="font-bold text-primary text-[15px] capitalize flex items-center gap-1 cursor-pointer">
+        <div className="card3 h-[750px] w-[610px] bg-red-400  flex items-center justify-center rounded-md">
+          <div className=" div-1 px-16 py-3 bg-[#f9f8f6c0] rounded-3xl flex gap-24  border border-[#000] ">
+            <span className="font-bold text-primary md:uppercase grotesk text-[20px] capitalize flex items-center  gap-1 cursor-pointer ">
               Maintaining <FaLongArrowAltRight />
             </span>
           </div>

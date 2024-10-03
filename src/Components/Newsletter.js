@@ -26,7 +26,7 @@ const Newsletter = () => {
           />
         </svg>
 
-        <div className="grid grid-cols-2 pb-32">
+        <div className="grid grid-cols-2 pb-32 ">
           <div>
             {/* <p className="text-white text-3xl text-center">
               Find us on Social Media{" "}

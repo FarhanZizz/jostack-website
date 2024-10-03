@@ -48,7 +48,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="bg-[#cccccc]">
+    <div className="">
     <div className="hero-section max-w-[1500px] mx-auto flex justify-between  py-40 ">
 
       <div className=" hero-title  grotesk ">

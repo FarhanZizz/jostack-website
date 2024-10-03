@@ -13,12 +13,15 @@ const About = () => {
       scrollTrigger: {
         trigger: ".about-title",
         scroller: ".smooth-scroll",
-        start: "top 120%",
+        start: "50% 50%",
+        end : "100% 50%",
         // end : "top 125%",
-        markers : true ,
-        scrub: true,
+        // markers : true ,
+        scrub: 2,
+        pin: true
       },
       fontSize: 100,
+      
     });
     gsap.from(".about-details p", {
       scrollTrigger: {

@@ -49,7 +49,7 @@ const Hero = () => {
 
   return (
     <div className="">
-    <div className="hero-section max-w-[1500px] mx-auto flex justify-between  py-40 ">
+    <div className="hero-section max-w-[1500px] mx-auto flex justify-between  min-h-screen mt-44 ">
 
       <div className=" hero-title  grotesk ">
         <h1 className="text-9xl font-bold "> TRANSFORMING IDEAS </h1>

@@ -1,49 +1,31 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React from "react";
-// import { FaCircleArrowRight } from "react-icons/fa6";
 import { PiSealQuestionFill } from "react-icons/pi";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 const About = () => {
-  // using GSAP //
+  // use gsap , emne joss . kintu if you stuck , you will get big duck !
 
-  gsap.registerPlugin(ScrollTrigger);
-  useGSAP(() => {
-    gsap.to(".about-title", {
-      scrollTrigger: {
-        trigger: ".about-title",
-        scroller: ".smooth-scroll",
-        start: "50% 50%",
-        end : "100% 50%",
-        // end : "top 125%",
-        // markers : true ,
-        scrub: 2,
-        pin: true
-      },
-      fontSize: 100,
-      
-    });
-    gsap.from(".about-details p", {
-      scrollTrigger: {
-        trigger: ".about-details p",
-        start: "top 130%",
-        scroller: ".smooth-scroll",
-      },
-      y: 50,
-      opacity: 0,
-      duration: 1,
-      delay: 0.5,
-      stagger: 0.3,
-    });
-  });
+  useGSAP(() =>{
+    const tl = gsap.timeline({scrollTrigger:{
+      trigger : ".Container-about",
+      scroll: ".smooth-scroll",
+      markers: true ,
+      start : "50% 50%",
+      end :"100% 50%",
+      scrub: 2 ,
+      pin : true 
+    }});
+  })
+
+
 
   return (
     <>
-      <section className="Container-about py-24  bg-[#000] max-w-[1630px] rounded-3xl mx-auto shadow-xl mt-24 ">
+      <section className="Container-about min-h-screen py-38  bg-[#000] max-w-[1630px] rounded-3xl mx-auto shadow-xl mt-24 ">
         {/* title of about section */}
         <div className=" mt-5 ">
           <div className="items-end">
-            <p className="about-title  grotesk text-[5px]  font-semibold mt-3 flex items-center mr-44 flex-row-reverse gap-5 align-right text-[#fff]  ">
+            <p className="about-title  grotesk text-[20px]  font-semibold mt-3 flex items-center mr-44 flex-row-reverse gap-5 align-right text-[#fff]  ">
               {" "}
               How Jostack Work <PiSealQuestionFill />
             </p>

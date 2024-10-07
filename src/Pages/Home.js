@@ -8,10 +8,10 @@ import Faq from "../Components/Faq";
 import Founders from "../Components/Founders";
 const Home = () => {
   return (
-    <div className="my-20">
+    <div >
       <Hero />
       <About />
-      <Services />
+      {/* <Services /> */}
       <Faq />
       <Founders/>
       <Newsletter />

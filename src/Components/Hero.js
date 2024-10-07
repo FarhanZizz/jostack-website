@@ -49,7 +49,7 @@ const Hero = () => {
 
   return (
     <div className="">
-    <div className="hero-section max-w-[1500px] mx-auto flex justify-between  min-h-screen mt-44 ">
+    <div className="hero-section max-w-[1500px] mx-auto flex justify-between  min-h-screen mt-44  ">
 
       <div className=" hero-title  grotesk ">
         <h1 className="text-9xl font-bold "> TRANSFORMING IDEAS </h1>
@@ -59,9 +59,9 @@ const Hero = () => {
 
       <div className="hero-details   text-[14px] space-y-2">
       <div className="svg mb-32">
-      <Lottie options={defaultOptions} height={300} width={300} />
+      <Lottie options={defaultOptions} height={250} width={250} />
       </div>
-      <div className="text-[20px] max-w-xl">
+      <div className="text-[20px] max-w-xl capitalize">
         <p>
           At Jostack, we transform your ideas into digital reality with expert
           website

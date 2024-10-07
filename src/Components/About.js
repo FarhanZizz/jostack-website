@@ -1,64 +1,125 @@
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import React from "react";
-import { PiSealQuestionFill } from "react-icons/pi";
+import React, { useEffect } from 'react';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { BsFillPatchQuestionFill } from "react-icons/bs";
+import { SplitText } from 'gsap/all';
+
 const About = () => {
-  // use gsap , emne joss . kintu if you stuck , you will get big duck !
 
-  useGSAP(() =>{
-    const tl = gsap.timeline({scrollTrigger:{
-      trigger : ".Container-about",
-      scroll: ".smooth-scroll",
-      markers: true ,
-      start : "50% 50%",
-      end :"100% 50%",
-      scrub: 2 ,
-      pin : true 
-    }});
-  })
+  // useEffect(() => {
+  // let  myText = new SplitText(".about-title");
+  // console.log(myText)
+  // }, []);
+
+useGSAP(()=>{
+
+ const tl = gsap.timeline({scrollTrigger:{
+  trigger: ".about-section",
+  scroller:".smooth-scroll",
+  // markers: true ,
+  start : "50% 50%" ,
+  end:"120% 50%" ,
+  scrub : 2,
+  pin:true 
+} }) ;
+
+
+tl.to(".a-one",{
+  opacity : "1",
+  marginTop:"-25%"
+},'a')
+.to(".a-two",{
+  opacity : "1",
+  
+},'b')
+
+ .to(".a-one",{
+  opacity : "0" ,
+  marginTop : "-150"
+},'b')
+ .to(".a-three",{
+  opacity : "1" ,
+  
+},'c')
+ .to(".a-two",{
+  opacity : "0" ,
+  marginTop : "-10",
+},)
+
+tl.to(".a-three",{
+  opacity : "0",
+  marginTop:"-55%"
+},'d')
+
+tl.to(".about-section",{
+  opacity:"50"
+})
+
+
+// .to(".question",{
+//   marginLeft :"30%",
+//   duration: 2 ,
+//   delay : 0.1 ,
+  
+// })
 
 
 
-  return (
-    <>
-      <section className="Container-about min-h-screen py-38  bg-[#000] max-w-[1630px] rounded-3xl mx-auto shadow-xl mt-24 ">
-        {/* title of about section */}
-        <div className=" mt-5 ">
-          <div className="items-end">
-            <p className="about-title  grotesk text-[20px]  font-semibold mt-3 flex items-center mr-44 flex-row-reverse gap-5 align-right text-[#fff]  ">
-              {" "}
-              How Jostack Work <PiSealQuestionFill />
-            </p>
-          </div>
 
-          {/* <div className="max-w-7xl mt-10 mx-auto bg-white h-1  rounded-3xl">br</div> */}
-          {/* content of  about section */}
-          <div className="about-details p-28 space-y-6 text-[26px] md:capitalize max-w-[1700px]">
-            <p className="text-[#fff]">
-              Our commitment to clients is rooted in strong, transparent
-              relationships and a deep understanding of{" "}
-            </p>
-            <p className="text-[#fff]">
-              their unique needs. We collaborate closely to bring your ideas to
-              life, leveraging our expertise in branding ,{" "}
-            </p>
-            <p className="text-[#fff]">
-              website development, and digital marketing to create tailored
-              solutions that resonate with target{" "}
-            </p>
-            <p className="text-[#fff]">
-              audiences. With a passion for innovation, our skilled team stays
-              at the forefront of technology, delivering{" "}
-            </p>
-            <p className="text-[#fff]">
-              cutting-edge solutions that enhance online presence, streamline
-              operations, and drive business growth.
-            </p>
-          </div>
-        </div>
-      </section>
-    </>
-  );
+})
+
+
+
+
+ return (
+  <div className=' about-section  bg-black  border  h-[100vh]  flex  rounded-xl'>
+
+
+  {/* left */}
+ <div className='right h-[100%] p-10   w-[50%]'>
+
+  <span className='text-white text-[3vw] grotesk font-bold capitalize  mt-[55%] underline w-[80%]  flex justify-center items-center gap-4 about-title '>how jostack work <BsFillPatchQuestionFill />  </span>
+  
+ 
+ </div>
+ {/* <span className='text-white text-[6vw] mt-[25%] question '></span> */}
+
+{/* right */}
+<div className='left h-[200%] w-[50%]  ml-44 mt-[30%]'> 
+
+<div className='w-[60%]  a-one opacity-0'>
+ <h1 className='text-white text-[3vw] capitalize mb-4  grotesk  '>
+  TItle 1
+ </h1>
+ <div className=' h-[0.5px] w-full bg-white rounded-xl'></div>
+ <p className='text-white text-[20px] capitalize mt-5'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution</p>
+</div>
+
+
+<div className='a-two opacity-0 w-[60%] mt-[700px]'>
+ <h1 className='text-white text-[3vw] capitalize mb-4  grotesk '>
+   Title 2
+ </h1>
+ <div className=' h-[0.5px] w-full bg-white rounded-xl'></div>
+ <p className='text-white text-[20px] capitalize mt-5'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution</p>
+</div>
+
+
+<div className='a-three opacity-0 w-[60%] mt-[700px]'>
+ <h1 className='text-white text-[3vw] capitalize mb-4  grotesk   '>
+  Title 3
+ </h1>
+ <div className=' h-[0.5px] w-full bg-white rounded-xl'></div>
+ <p className='text-white text-[20px] capitalize mt-5'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution</p>
+</div>
+
+
+
+
+</div>
+   
+  </div>
+ );
 };
 
 export default About;

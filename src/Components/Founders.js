@@ -23,13 +23,10 @@ useGSAP(() => {
  tl
  .to(".top",{
   top:"-50%",
-  // duration : 0.2 ,
-  // delay : 0.1 
+  
  },'a') 
  .to(".bottom",{
   bottom:"-50%",
-  // duration : 0.2 ,
-  // delay : 0.1
  },'a')
  .to(".top-h",{
   top:"80%"
@@ -46,12 +43,12 @@ useGSAP(() => {
 
 
   return (
-    <div className='main h-[100vh] w-full bg-white relative   overflow-hidden'> 
+    <div className='main   h-[100vh] relative bg-white overflow-hidden'> 
        
   
 
   {/* top */}
-  <div className='top bg-black w-full h-[50vh] absolute top-[0%] overflow-hidden z-10 ' >
+  <div className='top bg-black  h-[50%] w-full absolute top-[0%] overflow-hidden ' >
   <h1 className='top-h flex justify-center relative top-[17rem] text-[250px] grotesk font-bold text-white'>FOUNDERS</h1>
   </div>
 
@@ -59,7 +56,7 @@ useGSAP(() => {
 <div className='center bg-white w-full h-[100vh]    '>
 
 {/* content  */}
-<div className='content p-24 mt-[50%]'>
+<div className='content mt-[50%]'>
 
   {/* ratib */}
 
@@ -91,7 +88,7 @@ useGSAP(() => {
     <p> dedicated himself to building platforms that empower businesses and enhance user experiences. </p>
     <p className='font-bold'> “Crafting the future, one line of code at a time” </p>
 
-  <div className='founder-image-1 h-[0.5px] w-full bg-slate-950 rounded-xl'></div>
+  <div className=' h-[0.5px] w-full bg-slate-950 rounded-xl'></div>
   <div>
     <p>CEO & Founder</p>
   </div>

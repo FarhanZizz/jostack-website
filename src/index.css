@@ -11,7 +11,7 @@
 }
 
 html,body {
-  overflow: hidden;
+  /* overflow: hidden; */
   height: 100%
 }
 
@@ -26,6 +26,13 @@ html,body {
 .grotesk {
   font-family: "Space Grotesk", sans-serif;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+.jostack{
+  font-family: "Permanent Marker", cursive;
+}
+
 
 body {
   color: black;
@@ -43,22 +50,22 @@ code {
 /*  */
 
 
-.card1{
-  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(./assets/Card.0.1.jpg);
+#card-1{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.559), rgba(0, 0, 0, 0.531)), url(./assets/card-1.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   scale: 1;
 }
-.card2{
-  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)) ,url(./assets/card2.jpg);
+#card-2{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.559), rgba(0, 0, 0, 0.531)),url(./assets/card-2.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
 }
-.card3{
-  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)) ,url(./assets/card3.jpg);
+#card-3{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.559), rgba(0, 0, 0, 0.531)) ,url(./assets/card-3.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

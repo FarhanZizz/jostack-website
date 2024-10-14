@@ -27,29 +27,42 @@ const Faq = () => {
     },
   };
 
-  // useGSAP(() => {
-  //   gsap.fromTo(
-  //     ".chat-start",
-  //     { opacity: 0, y: -100 },
-  //     {
-  //       opacity: 1,
-  //       y: 0,
-  //       duration: 1,
-  //       scrollTrigger: {
-  //         trigger: ".chat-start",
-  //         scroller: ".smooth-scroll",
-  //         start: "top 100%",
-  //         end: "bottom 100%",
-  //         scrub: true,
-  //         pin: true,
-  //         pinSpacing: false,
-  //       },
-  //     }
-  //   );
-  // });
+  
+  useGSAP(() =>{
+     var tl = gsap.timeline({scrollTrigger:{
+    trigger: "#FAQ",
+    scroller:".smooth-scroll",
+    // markers: true ,
+    start : "-10% 70%" ,
+    end:"50% 50%" ,
+    scrub : 2,
+    // pin:true 
+  } }) ;
+
+  tl.to('#rounded-div-wrapper',{
+    height: 0 ,
+    marginTop : 0 ,
+    // duration :1 ,
+    // delay : 0.5
+  })
+
+  })
 
   return (
+
+    <div id="FAQ">
+
+  
+   <div id='rounded-div-wrapper' className='w-full h-[100px] bg-[#141517] relative overflow-hidden mt-[-100px]' >
+    
+    <div id='rounded-div' className='w-[150%] h-[750%] rounded-[50%] bg-white absolute left-[50%] -translate-x-[50%]  overflow-hidden '>
+    
+    </div>
+
+    </div>
+
     <div className="flex justify-center items-center min-h-screen chat-container">
+
       <div className="w-2/3">
         {/* First chat bubble */}
         <div className="chat chat-start">
@@ -75,6 +88,7 @@ const Faq = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

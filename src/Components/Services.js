@@ -51,14 +51,13 @@ useGSAP(() => {
   },'c')
 
 })
-
+ 
   return (
 
-    <div  className='service-main relative min-h-[150vh] w-[100%] border bg-[#141517]'>
+    <div  className='service-main relative min-h-[150vh] w-[100%]  bg-[#141517]  '>
+
       <div className='text-service md:uppercase relative text-[6vh] text-white font-semibold  flex flex-col items-center justify-center min-h-screen grotesk'>
-
         let's began with <span className='text-[9vh] jostack text-primary'>jostack</span>
-
       </div>
   
   <div className='absolute top-[250%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-red-500 h-[80vh] w-[80%] rounded-xl' id='card-1'>

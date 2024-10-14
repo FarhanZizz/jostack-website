@@ -5,6 +5,7 @@ import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import Footer from "./Components/footer";
 
 function App() {
   const scrollRef = useRef(null);
@@ -45,6 +46,7 @@ function App() {
     <div className="App smooth-scroll" ref={scrollRef} data-scroll-container>
       <Navbar />
       <Outlet />
+      <Footer></Footer>
     </div>
   );
 }

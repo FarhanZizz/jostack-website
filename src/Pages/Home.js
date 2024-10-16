@@ -8,13 +8,13 @@ import Faq from "../Components/Faq";
 import Founders from "../Components/Founders";
 const Home = () => {
   return (
-    <div >
+    <div>
       <Hero />
       <About />
       <Services />
       <Faq />
       {/* <Founders/> */}
-      <Newsletter />
+      {/* <Newsletter /> */}
     </div>
   );
 };

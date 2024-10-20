@@ -42,7 +42,7 @@ useGSAP(() => {
 
 
   return (
-    <div className='main   relative bg-white overflow-hidden z-0'> 
+    <div className='main   relative bg-white overflow-hidden z-0 my-20'> 
        
   
 

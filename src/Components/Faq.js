@@ -32,19 +32,42 @@ const Faq = () => {
      var tl = gsap.timeline({scrollTrigger:{
     trigger: "#FAQ",
     scroller:".smooth-scroll",
-    // markers: true ,
+   
     start : "-10% 70%" ,
     end:"50% 50%" ,
     scrub : 2,
-    // pin:true 
+   
   } }) ;
 
   tl.to('#rounded-div-wrapper',{
     height: 0 ,
     marginTop : 0 ,
-    // duration :1 ,
-    // delay : 0.5
+   
+   
   })
+
+  var tl2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".chat-container",
+      scroller: ".smooth-scroll",
+      start: "top top",
+      end: "+=2500",
+      scrub: true,
+      pin: true,
+    },
+  });
+
+ 
+  tl2.from(".chat-start", {
+    opacity: 0,
+    y: 100,
+    duration: 1,
+  })
+    .from(".chat-end", {
+      opacity: 0,
+      y: 100,
+      duration: 1,
+    }, "+=1");
 
   })
 
@@ -61,30 +84,22 @@ const Faq = () => {
 
     </div>
 
-    <div className="flex justify-center items-center min-h-screen chat-container">
+    <div className="flex justify-center items-center min-h-screen chat-container ">
 
-      <div className="w-2/3">
+      <div className="w-[60%] space-y-6">
         {/* First chat bubble */}
         <div className="chat chat-start">
-          <div className="chat-image avatar">
-            <div className="w-[55px] rounded-full">
-              <Lottie options={defaultOptions} />
-            </div>
-          </div>
-          <div className="chat-bubble text-3xl chat-bubble-primary text-white grotesk">
-            But I still have questions about your services.
+          
+          <div className="chat-bubble text-3xl bg-gray-500 text-white grotesk">
+            But what if I have questions about your services ?
           </div>
         </div>
 
         {/* Second chat bubble */}
-        <div className="chat chat-end gap-y-10">
-          <div className="chat-image avatar">
-            <div className="w-[55px]">
-              <Lottie options={defaultOptions2} />
-            </div>
-          </div>
-          <div className="chat-bubble text-3xl bg-gray-500 text-white">
-            Don't worry, we've got you covered!
+        <div className="chat chat-end">
+          
+          <div className="chat-bubble text-3xl  chat-bubble-primary text-white grotesk">
+            Don't worry, we've got you covered {":)"}
           </div>
         </div>
       </div>

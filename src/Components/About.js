@@ -13,8 +13,8 @@ useGSAP(()=>{
   trigger: ".about-section",
   scroller:".smooth-scroll",
   // markers: true ,
-  start : "50% 50%" ,
-  end:"120% 50%" ,
+  start : "top top" ,
+  end:"+=400%" ,
   scrub : 4,
   pin:true 
 } }) ;
@@ -72,7 +72,7 @@ tl.to(".a-one",{
 
 .to(".about-title",{
   marginLeft: "80%",
-  duration : 5,
+  duration : 10,
   delay : 2
 }) 
 
@@ -88,7 +88,7 @@ tl.to(".a-one",{
   {/* left */}
  <div className='right h-[100%] p-10   w-[50%]'>
 
-  <span className='text-black text-[3vw] about-title grotesk font-bold capitalize  mt-[55%] underline w-[80%]  flex justify-center items-center gap-4 about-title '>how jostack work <BsFillPatchQuestionFill />  </span>
+  <span className='text-black text-[3vw] about-title grotesk font-bold capitalize  mt-[40%] underline w-[80%]  flex justify-center items-center gap-4 about-title '>how jostack work <BsFillPatchQuestionFill />  </span>
   
  
  </div>

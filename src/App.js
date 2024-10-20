@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import LocomotiveScroll from "locomotive-scroll";
@@ -8,23 +8,22 @@ import { ScrollTrigger } from "gsap/all";
 import Footer from "./Components/footer";
 
 function App() {
-  const scrollRef = useRef(null);
-
   useEffect(() => {
+    
     gsap.registerPlugin(ScrollTrigger);
 
+    
     const locoScroll = new LocomotiveScroll({
       el: document.querySelector(".smooth-scroll"),
       smooth: true,
-
-      // for tablet smooth
       tablet: { smooth: true },
-
-      // for mobile
       smartphone: { smooth: true },
     });
+
+    
     locoScroll.on("scroll", ScrollTrigger.update);
 
+    
     ScrollTrigger.scrollerProxy(".smooth-scroll", {
       scrollTop(value) {
         return arguments.length
@@ -40,13 +39,18 @@ function App() {
         };
       },
     });
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+    ScrollTrigger.refresh();
+    return () => {
+      ScrollTrigger.removeEventListener("refresh", () => locoScroll.update());
+    };
   }, []);
 
   return (
-    <div className="App smooth-scroll" ref={scrollRef} data-scroll-container>
+    <div className="App smooth-scroll">
       <Navbar />
       <Outlet />
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 }

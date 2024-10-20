@@ -14,10 +14,6 @@ background: linear-gradient(90deg, rgba(0,0,0,1) 20%, rgba(72,72,72,1) 45%, rgba
   color: transparent;
 }
 
-[data-scroll-container] {
-  overflow: hidden;
-}
-
 html,body {
   overflow: hidden;
   height: 100%

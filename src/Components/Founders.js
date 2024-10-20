@@ -15,8 +15,8 @@ useGSAP(() => {
     trigger: ".main",
     scroller:".smooth-scroll",
     // markers: true ,
-    start : "40% 40%" ,
-    end:"100% 50%" ,
+    start : "top top" ,
+    end:"+=150%" ,
     scrub : 2,
     pin:true 
   } }) ;

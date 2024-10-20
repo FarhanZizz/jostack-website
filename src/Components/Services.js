@@ -1,54 +1,22 @@
 import React, { useEffect } from "react";
 import { FaArrowAltCircleRight } from "react-icons/fa";
+import { useGSAP } from '@gsap/react';
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import LocomotiveScroll from "locomotive-scroll";
 gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
-  useEffect(() => {
-    const scrollEl = document.querySelector(".smooth-scroll");
 
-    const locoScroll = new LocomotiveScroll({
-      el: scrollEl,
-      smooth: true,
-    });
-
-    ScrollTrigger.scrollerProxy(scrollEl, {
-      scrollTop(value) {
-        return arguments.length
-          ? locoScroll.scrollTo(value, 0, 0)
-          : locoScroll.scroll.instance.scroll.y;
-      },
-      getBoundingClientRect() {
-        return {
-          top: 0,
-          left: 0,
-          width: window.innerWidth,
-          height: window.innerHeight,
-        };
-      },
-      pinType: scrollEl.style.transform ? "transform" : "fixed",
-    });
-
-    locoScroll.on("scroll", ScrollTrigger.update);
-
-    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-    ScrollTrigger.refresh();
-
-    return () => {
-      locoScroll.destroy();
-    };
-  }, []);
-
-  useEffect(() => {
+  useGSAP(()=>{
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".service-main",
         scroller: ".smooth-scroll",
-        start: "top top",
-        end: "bottom bottom",
-        scrub: 2,
+        start : "top top" ,
+        end:"+=200%",
+        scrub : 3,
+        pin:true,
       },
     });
 
@@ -60,7 +28,7 @@ const Services = () => {
       .to("#card-3", { top: "130%" }, "b")
       .to("#card-3", { top: "50%" }, "c")
       .to("#card-2", { width: "70%", height: "70vh" }, "c");
-  }, []);
+  })
 
   return (
     <div className="service-main relative min-h-[150vh] w-[100%] bg-[#141517] smooth-scroll">

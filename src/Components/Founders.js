@@ -48,7 +48,7 @@ useGSAP(() => {
 
   {/* top */}
   <div className='top bg-[#141517]  h-[50%] w-full absolute top-[0%] overflow-hidden ' >
-  <h1 className='top-h flex justify-center relative top-[17rem] text-[250px] grotesk font-bold text-white'>FOUNDERS</h1>
+  <h1 className='top-h flex justify-center relative top-[11rem] text-[250px] grotesk font-bold text-white'>FOUNDERS</h1>
   </div>
 
 {/* center */}

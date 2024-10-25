@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import LocomotiveScroll from "locomotive-scroll";
@@ -9,7 +9,7 @@ import Footer from "./Components/footer";
 
 function App() {
   gsap.registerPlugin(ScrollTrigger);
-  useEffect(() => {
+  useLayoutEffect(() => {
     const locoScroll = new LocomotiveScroll({
       el: document.querySelector(".smooth-scroll"),
       smooth: true,

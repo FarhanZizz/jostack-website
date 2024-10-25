@@ -22,7 +22,7 @@ function App() {
     ScrollTrigger.scrollerProxy(".smooth-scroll", {
       scrollTop(value) {
         return arguments.length
-          ? locoScroll.scrollTo(value, 0, 0)
+          ? locoScroll.scrollTo(value, { duration: 0, disableLerp: true })
           : locoScroll.scroll.instance.scroll.y;
       },
       getBoundingClientRect() {

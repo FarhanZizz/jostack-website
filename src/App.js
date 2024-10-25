@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect } from "react";
+import { useLayoutEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import LocomotiveScroll from "locomotive-scroll";

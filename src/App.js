@@ -8,11 +8,8 @@ import { ScrollTrigger } from "gsap/all";
 import Footer from "./Components/footer";
 
 function App() {
+  gsap.registerPlugin(ScrollTrigger);
   useEffect(() => {
-    
-    gsap.registerPlugin(ScrollTrigger);
-
-    
     const locoScroll = new LocomotiveScroll({
       el: document.querySelector(".smooth-scroll"),
       smooth: true,
@@ -20,10 +17,8 @@ function App() {
       smartphone: { smooth: true },
     });
 
-    
     locoScroll.on("scroll", ScrollTrigger.update);
 
-    
     ScrollTrigger.scrollerProxy(".smooth-scroll", {
       scrollTop(value) {
         return arguments.length

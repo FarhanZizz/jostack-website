@@ -3,7 +3,7 @@ import { FaArrowAltCircleRight } from "react-icons/fa";
 import gsap from "gsap";
 
 //
-import React, { useEffect } from "react";
+import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -35,7 +35,6 @@ const Navbar = () => {
       duration: 0.6,
       delay: 0.7,
     });
-   
   });
 
   return (

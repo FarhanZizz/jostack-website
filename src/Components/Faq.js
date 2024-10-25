@@ -1,31 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import asker from "../assets/asker.json";
-import answer from "../assets/answer.json";
+
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Faq = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: asker,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-
-  const defaultOptions2 = {
-    loop: true,
-    autoplay: true,
-    animationData: answer,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-
   useGSAP(() => {
     var tl = gsap.timeline({
       scrollTrigger: {

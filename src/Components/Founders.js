@@ -81,6 +81,7 @@ const Founders = () => {
               <div className="  border-primary border-[8px] p-3 rounded-full ">
                 <div className="h-56 w-56 bg-slate-900 rounded-full">
                   <img
+                    alt="Ratib"
                     src={ratib}
                     className="h-56 w-56 bg-slate-900 rounded-full"
                   ></img>
@@ -160,6 +161,7 @@ const Founders = () => {
               <div className="  border-primary border-[8px] p-3 rounded-full ">
                 <div className="">
                   <img
+                    alt="Farhan"
                     src={farhan}
                     className="h-56 w-56 bg-slate-900 rounded-full"
                   ></img>

@@ -98,7 +98,10 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="rounded-3x bg-primary px-3 py-1 rounded-xl text-white flex items-center gap-3">
+        <a
+          href="/contact"
+          className="rounded-3x bg-primary px-3 py-1 rounded-xl text-white flex items-center gap-3"
+        >
           Contact <FaArrowAltCircleRight />
         </a>
       </div>

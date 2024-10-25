@@ -120,8 +120,6 @@ const About = () => {
             distribution
           </p>
         </div>
-
-        <h1 className="text-black text-[4vw] mt-9"></h1>
       </div>
     </div>
   );

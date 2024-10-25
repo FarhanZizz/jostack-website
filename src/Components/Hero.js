@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import { useGSAP } from "@gsap/react";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import gsap from "gsap";
@@ -71,7 +70,10 @@ const Hero = () => {
             <p> designed to elevate your business in the digital world.</p>
           </div>
           <div className="flex items-center mt-4">
-            <a className="btn-hero rounded-3x bg-primary px-3 py-1 rounded-xl text-white flex items-center gap-3">
+            <a
+              href="/contact"
+              className="btn-hero rounded-3x bg-primary px-3 py-1 rounded-xl text-white flex items-center gap-3"
+            >
               Contact <FaArrowAltCircleRight />{" "}
             </a>
           </div>

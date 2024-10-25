@@ -1,5 +1,4 @@
 import React from "react";
-import { FaLinkedinIn, FaWhatsapp, FaTelegram } from "react-icons/fa";
 
 const Newsletter = () => {
   return (
@@ -117,9 +116,11 @@ d: path("M 0,700 L 0,706 C 45.6476042329966,708.8044100118946 91.2952084659932,7
             </h1>
           </div>
           <div className="flex flex-col justify-center items-center ">
-            <p className="text-[#fff] text-[2vw] capitalize font-bold ">Want to stay in the loop?</p>
+            <p className="text-[#fff] text-[2vw] capitalize font-bold ">
+              Want to stay in the loop?
+            </p>
             <h1 className="text-5xl font-bold  mt-5 leading-relaxed  flex gap-4 justify-center items-center capitalize text-[#ffffffb8] ">
-              Drop your email to <span  >get latest updates </span>
+              Drop your email to <span>get latest updates </span>
             </h1>
             <h1 className="text-[2vw] font-bold text-white   leading-relaxed flex gap-6 justify-center items-center capitalize ">
               from <span className="jostack text-[4vw]">Jostack</span>
@@ -130,7 +131,6 @@ d: path("M 0,700 L 0,706 C 45.6476042329966,708.8044100118946 91.2952084659932,7
                   type="text"
                   placeholder="example@mail.com"
                   className="input input-bordered border-none"
-
                 />
               </label>
               <button className="btn btn-primary  relative -left-2">

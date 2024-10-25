@@ -1,22 +1,21 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { FaArrowAltCircleRight } from "react-icons/fa";
-import { useGSAP } from '@gsap/react';
+import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import LocomotiveScroll from "locomotive-scroll";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
-
-  useGSAP(()=>{
+  useGSAP(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".service-main",
         scroller: ".smooth-scroll",
-        start : "top top" ,
-        end:"+=200%",
-        scrub : 3,
-        pin:true,
+        start: "top top",
+        end: "+=200%",
+        scrub: 3,
+        pin: true,
       },
     });
 
@@ -28,13 +27,15 @@ const Services = () => {
       .to("#card-3", { top: "130%" }, "b")
       .to("#card-3", { top: "50%" }, "c")
       .to("#card-2", { width: "70%", height: "70vh" }, "c");
-  })
+  });
 
   return (
     <div className="service-main relative min-h-[150vh] w-[100%] bg-[#141517] smooth-scroll">
       <div className="text-service md:uppercase relative text-[6vh] text-white font-semibold flex flex-col items-center justify-center min-h-screen grotesk">
         let's begin with{" "}
-        <span className="text-[9vh] jostack text-primary px-12 py-1 bg-[#ffffffee] rounded-3xl">jostack</span>
+        <span className="text-[9vh] jostack text-primary px-12 py-1 bg-[#ffffffee] rounded-3xl">
+          jostack
+        </span>
       </div>
 
       <div

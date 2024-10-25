@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import Lottie from "react-lottie";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import asker from "../assets/asker.json";

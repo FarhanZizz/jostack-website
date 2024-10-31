@@ -130,7 +130,7 @@ d: path("M 0,700 L 0,706 C 45.6476042329966,708.8044100118946 91.2952084659932,7
                 <input
                   type="text"
                   placeholder="example@mail.com"
-                  className="input input-bordered border-none"
+                  className="input input-bordered border-none text-[#ff4f4f] w-full text-[1vw] font-bold"
                 />
               </label>
               <button className="btn btn-primary  relative -left-2">

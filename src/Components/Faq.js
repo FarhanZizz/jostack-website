@@ -128,7 +128,7 @@ const Faq = () => {
       <div className="min-h-screen faq-container py-10">
         <div className="faq-text text-center">
           <h1 className="text-3xl text-primary">Here's Some</h1>
-          <h1 className="text-9xl  leading-tight">
+          <h1 className="text-9xl  leading-tight font-bold">
             Frequently Asked Questions
           </h1>
         </div>

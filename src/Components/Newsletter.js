@@ -2,7 +2,7 @@ import React from "react";
 
 const Newsletter = () => {
   return (
-    <div className="relative w-full h-[100%]">
+    <div className="relative w-full h-[100%] mt-10">
       {/* Background SVG */}
       <svg
         width="100vw"

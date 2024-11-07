@@ -1,5 +1,4 @@
 import React from "react";
-import { FaArrowAltCircleRight } from "react-icons/fa";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -23,10 +22,10 @@ const Services = () => {
       .to("#card-1", { top: "35%" }, "a")
       .to("#card-2", { top: "130%" }, "a")
       .to("#card-2", { top: "42%" }, "b")
-      .to("#card-1", { width: "65%", height: "65vh" }, "b")
+      // .to("#card-1", { width: "75%", height: "65vh" }, "b")
       .to("#card-3", { top: "130%" }, "b")
-      .to("#card-3", { top: "50%" }, "c")
-      .to("#card-2", { width: "70%", height: "70vh" }, "c");
+      .to("#card-3", { top: "50%" }, "c");
+    // .to("#card-2", { width: "75%", height: "70vh" }, "c");
   });
 
   return (
@@ -39,47 +38,90 @@ const Services = () => {
       </div>
 
       <div
-        className="absolute top-[250%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-red-500 h-[80vh] w-[80%] rounded-xl"
+        className="absolute top-[250%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-[#999999] h-[70vh] w-[80%] rounded-xl"
         id="card-1"
       >
-        <div className="flex flex-col justify-between items-center mt-12">
-          <h1 className="text-[9vh] text-white font-bold md:uppercase grotesk">
-            Branding Your Website
-          </h1>
-          <div className="bg-white px-5 py-1 font-bold fixed rounded-xl flex items-center gap-2 mt-96 md:uppercase">
-            Start
-            <FaArrowAltCircleRight />
+        <div className="grid grid-cols-3  h-full">
+          <div className="col-span-2 p-16">
+            <h1 className="text-6xl text-white font-bold md:uppercase grotesk">
+              Website Building
+            </h1>
+            <h1 className="text-3xl text-primary mt-5">
+              Crafted from Scratch to Success
+            </h1>
+            <p className="text-3xl mt-5 leading-loose ">
+              We design and develop fully tailored websites to create a{" "}
+              <span className="bg-primary text-white px-2 py-1 rounded-xl capitalize">
+                unique digital identity
+              </span>{" "}
+              for your brand, ensuring it stands out from the competition.
+            </p>
+            <button className="btn btn-outline border-none btn-primary bg-white mt-5 font-bold grotesk text-2xl w-full">
+              Start Your Project
+            </button>
           </div>
+          <div className="bg-white h-full w-full rounded-e-xl place-content-center"></div>
         </div>
       </div>
 
       <div
-        className="absolute top-[230%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-red-800 h-[80vh] w-[80%] rounded-xl"
+        className="absolute top-[230%] left-[50%] text-white  -translate-x-[50%] -translate-y-[50%] bg-[#2f463e] h-[70vh] w-[80%] rounded-xl"
         id="card-2"
       >
-        <div className="flex flex-col justify-between items-center mt-12">
-          <h1 className="text-[9vh] text-white font-bold md:uppercase grotesk">
-            Build your website
-          </h1>
-          <div className="bg-white px-5 py-1 font-bold fixed rounded-xl flex items-center gap-2 mt-96 md:uppercase">
-            Start
-            <FaArrowAltCircleRight />
+        <div className="grid grid-cols-3  h-full">
+          <div className="col-span-2 p-16">
+            <h1 className="text-6xl  font-bold md:uppercase grotesk">
+              Website Branding
+            </h1>
+            <h1 className="text-3xl mt-5 ">
+              A brand that leaves a{" "}
+              <span className="bg-primary  px-2 py-1 rounded-xl capitalize">
+                lasting impression
+              </span>{" "}
+            </h1>
+            <p className="text-3xl mt-5 leading-loose ">
+              From logo design to color schemes we ensure every detail aligns
+              with your{" "}
+              <span className="bg-primary  px-2 py-1 rounded-xl capitalize">
+                brand’s personality
+              </span>{" "}
+              and resonates with your target audience.
+            </p>
+            <button className="btn btn-outline border-none btn-primary bg-white mt-5 font-bold grotesk text-2xl w-full">
+              Create Your Brand
+            </button>
           </div>
+          <div className="bg-white h-full w-full rounded-e-xl place-content-center"></div>
         </div>
       </div>
 
       <div
-        className="absolute top-[250%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-red-300 h-[80vh] w-[80%] rounded-xl"
+        className="absolute top-[230%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-[#101d2e] h-[70vh] w-[80%] rounded-xl text-white"
         id="card-3"
       >
-        <div className="flex flex-col justify-between items-center mt-12">
-          <h1 className="text-[9vh] text-white font-bold md:uppercase grotesk">
-            Maintain Your Website
-          </h1>
-          <div className="bg-white px-5 py-1 font-bold fixed rounded-xl flex items-center gap-2 mt-96 md:uppercase">
-            Start
-            <FaArrowAltCircleRight />
+        <div className="grid grid-cols-3  h-full">
+          <div className="col-span-2 p-16">
+            <h1 className="text-6xl  font-bold md:uppercase grotesk">
+              Website Maintenance
+            </h1>
+            <h1 className="text-3xl  mt-5">
+              <span className="bg-primary  px-2 py-1 rounded-xl capitalize">
+                Hassle-free upkeep
+              </span>{" "}
+              for a high-performing website.
+            </h1>
+            <p className="text-3xl mt-5 leading-loose ">
+              Our team manages regular security updates, speed optimization, and{" "}
+              <span className="bg-primary  px-2 py-1 rounded-xl capitalize">
+                technical support
+              </span>{" "}
+              to keep your website running smoothly.
+            </p>
+            <button className="btn btn-outline border-none btn-primary bg-white mt-5 font-bold grotesk text-2xl w-full">
+              Optimize Now
+            </button>
           </div>
+          <div className="bg-white h-full w-full rounded-e-xl place-content-center"></div>
         </div>
       </div>
     </div>

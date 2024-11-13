@@ -15,7 +15,7 @@ const Faq = () => {
 
         start: "-10% 70%",
         end: "50% 50%",
-        scrub: 2,
+        scrub: 1,
       },
     });
 
@@ -97,7 +97,7 @@ const Faq = () => {
   });
 
   return (
-    <div id="FAQ ">
+    <div id="FAQ">
       <div
         id="rounded-div-wrapper"
         className="w-full h-[100px] bg-[#141517] relative overflow-hidden mt-[-100px]"

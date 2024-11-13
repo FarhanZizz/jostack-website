@@ -38,10 +38,10 @@ const Services = () => {
       </div>
 
       <div
-        className="absolute top-[250%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-[#999999] h-[70vh] w-[80%] rounded-xl"
+        className="absolute top-[250%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-[#999999] h-[520px] w-[80%] rounded-xl"
         id="card-1"
       >
-        <div className="grid grid-cols-3  h-full">
+        <div className="grid grid-cols-3  h-full items-center">
           <div className="col-span-2 p-16">
             <h1 className="text-6xl text-white font-bold md:uppercase grotesk">
               Website Building
@@ -65,10 +65,10 @@ const Services = () => {
       </div>
 
       <div
-        className="absolute top-[230%] left-[50%] text-white  -translate-x-[50%] -translate-y-[50%] bg-[#2f463e] h-[70vh] w-[80%] rounded-xl"
+        className="absolute top-[230%] left-[50%] text-white  -translate-x-[50%] -translate-y-[50%] bg-[#2f463e] h-[520px] w-[80%] rounded-xl"
         id="card-2"
       >
-        <div className="grid grid-cols-3  h-full">
+        <div className="grid grid-cols-3  h-full items-center">
           <div className="col-span-2 p-16">
             <h1 className="text-6xl  font-bold md:uppercase grotesk">
               Website Branding
@@ -96,10 +96,10 @@ const Services = () => {
       </div>
 
       <div
-        className="absolute top-[230%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-[#101d2e] h-[70vh] w-[80%] rounded-xl text-white"
+        className="absolute top-[230%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-[#101d2e] h-[520px] w-[80%] rounded-xl text-white"
         id="card-3"
       >
-        <div className="grid grid-cols-3  h-full">
+        <div className="grid grid-cols-3  h-full items-center">
           <div className="col-span-2 p-16">
             <h1 className="text-6xl  font-bold md:uppercase grotesk">
               Website Maintenance

@@ -10,7 +10,7 @@ const Newsletter = () => {
         id="svg"
         viewBox="0 0 1440 690"
         xmlns="http://www.w3.org/2000/svg"
-        className="transition duration-300 ease-in-out delay-150 absolute top-0 left-0 scale-110"
+        className="transition duration-300 ease-in-out delay-150 absolute top-0 left-0 scale-x-110"
       >
         <style>{`
 .path-0{

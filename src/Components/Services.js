@@ -38,7 +38,7 @@ const Services = () => {
       </div>
 
       <div
-        className="absolute top-[250%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-[#999999] h-[520px] w-[80%] rounded-xl"
+        className="absolute top-[250%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-[#999999]  w-[80%] rounded-xl"
         id="card-1"
       >
         <div className="grid grid-cols-3  h-full items-center">
@@ -60,12 +60,12 @@ const Services = () => {
               Start Your Project
             </button>
           </div>
-          <div className="bg-white h-full w-full rounded-e-xl place-content-center"></div>
+          <div className="bg-white rounded-e-xl place-content-center"></div>
         </div>
       </div>
 
       <div
-        className="absolute top-[230%] left-[50%] text-white  -translate-x-[50%] -translate-y-[50%] bg-[#2f463e] h-[520px] w-[80%] rounded-xl"
+        className="absolute top-[230%] left-[50%] text-white  -translate-x-[50%] -translate-y-[50%] bg-[#2f463e]  w-[80%] rounded-xl"
         id="card-2"
       >
         <div className="grid grid-cols-3  h-full items-center">
@@ -91,12 +91,12 @@ const Services = () => {
               Create Your Brand
             </button>
           </div>
-          <div className="bg-white h-full w-full rounded-e-xl place-content-center"></div>
+          <div className="bg-white rounded-e-xl place-content-center"></div>
         </div>
       </div>
 
       <div
-        className="absolute top-[230%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-[#101d2e] h-[520px] w-[80%] rounded-xl text-white"
+        className="absolute top-[230%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-[#101d2e]  w-[80%] rounded-xl text-white"
         id="card-3"
       >
         <div className="grid grid-cols-3  h-full items-center">
@@ -121,7 +121,7 @@ const Services = () => {
               Optimize Now
             </button>
           </div>
-          <div className="bg-white h-full w-full rounded-e-xl place-content-center"></div>
+          <div className="bg-white rounded-e-xl place-content-center"></div>
         </div>
       </div>
     </div>

@@ -48,7 +48,7 @@ const data = [
 ];
 
 const data_2 = ['Website Building','Website Branding','Website Maintenance'] ;
-const data_3 = ['Whatsapp','Teligram','Others'] ;
+
 
  return (
 
@@ -59,7 +59,7 @@ const data_3 = ['Whatsapp','Teligram','Others'] ;
        
     <section className='text-contact  p-9 '>
     <h1 className='text-[3vw] text-white font-semibold capitalize'> Fill out the form !</h1>
-    <p className='text-white max-w-4xl space-y-8 text-[20px] capitalize mt-3'>
+    <p className='text-white max-w-4xl space-y-12 text-[20px] capitalize mt-3 '>
       We hope you're doing well! To make sure we can serve you as quickly and efficiently as possible, we invite you to fill out a quick form. By doing so,<span className='bg-white text-black rounded font-semibold px-3'> you’ll have direct access to all of our services </span>and be able to easily get in touch with our team.
     </p>
     </section>
@@ -68,7 +68,7 @@ const data_3 = ['Whatsapp','Teligram','Others'] ;
     <form className=' px-10 py-12 flex items-center justify-between '>
     
     {/* right side */}
-    <section className='space-y-24'>
+     <section className='space-y-24'>
           <div className='flex flex-col items-ce gap-5'>
        <span className='text-white text-[21px] grotesk'>What should we call you </span>
         <input type='text' placeholder='Name'   onChange={(e) => setval2 (e.target.value)}
@@ -80,15 +80,11 @@ const data_3 = ['Whatsapp','Teligram','Others'] ;
         <input type='email' placeholder='email@gmail.com'  
         className='bg-[#f1f1f12e] w-96 p-3 text-[#fff] grotesk rounded-2xl text-[20px] px-10 border-2 border-white required '/>
       </div>
-      {/*  */}
-        <div className='flex flex-col items-ce gap-5 mt-7'>
-       <span className='text-white text-[21px] grotesk'>Which country are you from ?</span>
-        <input type='email' placeholder='Country_Name'  
-        className='bg-[#f1f1f12e] w-96 p-3 text-[#fff] grotesk rounded-2xl text-[20px] px-10 border-2 border-white required '/>
-      </div>
-    </section>
+
+
+  </section>
   {/* middle side */}
-   <section className='space-y-24' >
+  <section className='space-y-24' >
      <div className='flex flex-col items-ce gap-5 '>
        <span className='text-white text-[21px] grotesk'> Which type of project you have? </span>
         <input type='text' placeholder='E-commerce'list='data' onChange={(e) => setval (e.target.value)}
@@ -108,19 +104,10 @@ const data_3 = ['Whatsapp','Teligram','Others'] ;
         </datalist>
       </div>
     {/*  */}
-    <div className='flex flex-col items-ce gap-5 mt-7'>
-       <span className='text-white text-[21px] grotesk'>How can we contact you ?</span>
-        <input type='text' placeholder='Website Building'list='data_3' onChange={(e) => setval4 (e.target.value)}
-        className='bg-[#f1f1f12e] w-96 p-3 text-[#fff] grotesk rounded-2xl text-[20px] px-10 border-2 border-white required '/>
-        <datalist id='data_3'>
-         {data_3.map((op) => <option>{op}</option>)}
-        </datalist>
-      </div>
+    
    </section>
-
    {/* left side  */}
-
-   <section className='w-[400px] h-[500px] bg-[#ffffff5c] rounded-3xl px-4 py-5 space-y-3  border-2 border-white'>
+      <section className='w-[400px] h-[500px] bg-[#ffffff5c] rounded-3xl p-5 space-y-5  border-2 border-white'>
      <h1 className='text-white grotesk text-[21px] capitalize font-semibold'>Hey<span className='bg-[#0000008b] py-1 px-4 mr-1 ml-1 rounded-xl'>{val2}</span> </h1>
      <h1 className='text-white grotesk text-[21px] capitalize font-semibold mt-2'>Type of project You have which is <br/>
        <span className='bg-[#0000008b] py-1 px-4  rounded-xl '>
@@ -128,9 +115,7 @@ const data_3 = ['Whatsapp','Teligram','Others'] ;
      <h1 className='text-white grotesk text-[21px] capitalize font-semibold mt-2'>And you want to take a service  which is  
        <span className='bg-[#0000008b] py-1 px-4  rounded-xl ml-[3px] '>
    {val3}</span></h1>
-    <h1 className='text-white grotesk text-[21px] capitalize font-semibold mt-2'>You want to contact with us with   
-       <span className='bg-[#0000008b] py-1 px-4  rounded-xl ml-[3px] '>
-   {val4}</span></h1>
+   
    <h1 className='text-white grotesk text-[21px] capitalize font-semibold '>That's Cool !!</h1>
    <h1 className=' grotesk text-[18px] capitalize mt-1 text-[#f3f0b8]'>Now you can SUBMIT your information to us And we will contact you very soon via Email.</h1>
 
@@ -141,10 +126,6 @@ const data_3 = ['Whatsapp','Teligram','Others'] ;
    </section>
       
     </form>
-   
-
-
-
     </div>
 
   </div>

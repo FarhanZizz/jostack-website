@@ -3,8 +3,8 @@ import { FaTelegram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="h-[90vh] grotesk p-20">
-      <div className="flex flex-col justify-between h-full">
+    <div className="h-screen grotesk p-20">
+      <div className="flex flex-col justify-between h-5/6">
         <h1 className="text-8xl font-medium">Contact Information</h1>
       </div>
       <div className="flex justify-between">

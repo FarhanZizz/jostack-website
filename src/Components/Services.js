@@ -29,7 +29,7 @@ const Services = () => {
   });
 
   return (
-    <div className="service-main relative min-h-[150vh] w-[100%] bg-[#141517] smooth-scroll">
+    <div className="service-main relative min-h-[150vh] w-[100%]  smooth-scroll">
       <div className="text-service md:uppercase relative text-[6vh] text-white font-semibold flex flex-col items-center justify-center min-h-screen grotesk">
         let's begin with{" "}
         <span className="text-[9vh] jostack text-primary px-12 py-1 bg-[#ffffffee] rounded-3xl">

@@ -10,8 +10,10 @@ const Home = () => {
   return (
     <div>
       <Hero />
-      <About />
+    <div className="bg-[#141517]">
+        <About />
       <Services />
+    </div>
       <Faq />
       <Founders />
       <Newsletter />

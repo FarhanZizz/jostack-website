@@ -111,15 +111,15 @@ d: path("M 0,700 L 0,706 C 45.6476042329966,708.8044100118946 91.2952084659932,7
       <div className="relative z-10 w-screen h-screen">
         <div className=" h-full flex flex-col  items-center mt-6 space-y-24">
           <div>
-            <h1 className="text-[7vw] text-[#ffffffb8] font-bold relative z-20 grotesk px-14 capitalize  rounded-2xl mt-12  ">
+            <h1 className="text-[7vw] text-[#ffffff] font-bold relative z-20 grotesk px-14 capitalize  rounded-2xl mt-12  ">
               <span className="text-[#000000ab]">Let’s work</span> together!
             </h1>
           </div>
-          <div className="flex flex-col justify-center items-center ">
+          <div >
             <p className="text-[#fff] text-[2vw] capitalize font-bold ">
               Want to stay in the loop?
             </p>
-            <h1 className="text-5xl font-bold  mt-5 leading-relaxed  flex gap-4 justify-center items-center capitalize text-[#ffffffb8] ">
+            <h1 className="text-5xl font-bold  mt-5 leading-relaxed  flex gap-4  capitalize text-[#ffffff] ">
               Drop your email to <span>get latest updates </span>
             </h1>
             <h1 className="text-[2vw] font-bold text-white   leading-relaxed flex gap-6 justify-center items-center capitalize ">

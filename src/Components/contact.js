@@ -71,14 +71,14 @@ const data_2 = ['Website Building','Website Branding','Website Maintenance'] ;
      <section className='space-y-24'>
           <div className='flex flex-col items-ce gap-5'>
        <span className='text-white text-[21px] grotesk'>What should we call you </span>
-        <input type='text' placeholder='Name'   onChange={(e) => setval2 (e.target.value)}
-        className='bg-[#f1f1f12e] w-96 p-3 text-[#fff] grotesk rounded-2xl text-[20px] px-10 border-2 border-white required '/>
+        <input type='text' placeholder='Name' required  onChange={(e) => setval2 (e.target.value)}
+        className='bg-[#f1f1f12e] w-96 p-3 text-[#fff] grotesk rounded-2xl text-[20px] px-10 border-2 border-white  '/>
       </div>
 
         <div className='flex flex-col items-ce gap-5 mt-7'>
        <span className='text-white text-[21px] grotesk'>Cool! Whats Your mail address?</span>
-        <input type='email' placeholder='email@gmail.com'  
-        className='bg-[#f1f1f12e] w-96 p-3 text-[#fff] grotesk rounded-2xl text-[20px] px-10 border-2 border-white required '/>
+        <input type='email' placeholder='email@gmail.com'  required
+        className='bg-[#f1f1f12e] w-96 p-3 text-[#fff] grotesk rounded-2xl text-[20px] px-10 border-2 border-white  '/>
       </div>
 
 
@@ -87,8 +87,8 @@ const data_2 = ['Website Building','Website Branding','Website Maintenance'] ;
   <section className='space-y-24' >
      <div className='flex flex-col items-ce gap-5 '>
        <span className='text-white text-[21px] grotesk'> Which type of project you have? </span>
-        <input type='text' placeholder='E-commerce'list='data' onChange={(e) => setval (e.target.value)}
-        className='bg-[#f1f1f12e] w-96 p-3 text-[#fff] grotesk rounded-2xl text-[20px] px-10 border-2 border-white required '/>
+        <input type='text' placeholder='E-commerce'list='data' onChange={(e) => setval (e.target.value)} required
+        className='bg-[#f1f1f12e] w-96 p-3 text-[#fff] grotesk rounded-2xl text-[20px] px-10 border-2 border-white  '/>
         <datalist id='data'>
          {data.map((op) => <option>{op}</option>)}
         </datalist>
@@ -97,8 +97,8 @@ const data_2 = ['Website Building','Website Branding','Website Maintenance'] ;
 
          <div className='flex flex-col items-ce gap-5 mt-7'>
        <span className='text-white text-[21px] grotesk'> Which type of Service you want to take  ? </span>
-        <input type='text' placeholder='Website Building'list='data_2' onChange={(e) => setval3 (e.target.value)}
-        className='bg-[#f1f1f12e] w-96 p-3 text-[#fff] grotesk rounded-2xl text-[20px] px-10 border-2 border-white required '/>
+        <input type='text' placeholder='Website Building'list='data_2' onChange={(e) => setval3 (e.target.value)} required
+        className='bg-[#f1f1f12e] w-96 p-3 text-[#fff] grotesk rounded-2xl text-[20px] px-10 border-2 border-white '/>
         <datalist id='data_2'>
          {data_2.map((op) => <option>{op}</option>)}
         </datalist>

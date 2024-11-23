@@ -86,7 +86,7 @@ const About = () => {
           <h1 className="text-white text-[3vw] capitalize mb-4  grotesk  ">
             Discover and Plan
           </h1>
-          <div className=" h-[0.5px] w-full bg-primary rounded-xl"></div>
+          <div className=" h-[0.5px] w-full bg-white rounded-xl"></div>
           <p className="text-white text-[20px] capitalize mt-5">
             We begin by understanding your business needs and goals. From There, we create a tailored plan, outlining the digital tools and services that will best suit your brand.
           </p>
@@ -106,7 +106,7 @@ const About = () => {
           <h1 className="text-white text-[3vw] capitalize mb-4  grotesk   ">
             Launch and Support
           </h1>
-          <div className=" h-[0.5px] w-full bg-black rounded-xl"></div>
+          <div className=" h-[0.5px] w-full bg-white rounded-xl"></div>
           <p className="text-white text-[20px] capitalize mt-5">
            Once reviewed and approved, we launch your project with ongoing support. We monitor project performance, provide updates, and offer services that help you grow and succeed.
           </p>

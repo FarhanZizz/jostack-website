@@ -1,6 +1,14 @@
 import React from "react";
-
+import {useTypewriter , Cursor} from 'react-simple-typewriter' ;
 const Newsletter = () => {
+
+  const [ text ] = useTypewriter({
+    words: ["let's work together"],
+    loop: true,
+    typeSpeed: 100,
+    deleteSpeed: 50,
+    delaySpeed: 1000,
+  });
   return (
     <div className="relative w-full h-[100%] mt-10">
       {/* Background SVG */}
@@ -108,22 +116,27 @@ d: path("M 0,700 L 0,706 C 45.6476042329966,708.8044100118946 91.2952084659932,7
       </svg>
 
       {/* Content Container */}
-      <div className="relative z-10 w-screen h-screen">
+      <div className="relative z-10 w-screen h-screen ">
         <div className=" h-full flex flex-col  items-center mt-6 space-y-24">
           <div>
-            <h1 className="text-[7vw] text-[#ffffff] font-bold relative z-20 grotesk px-14 capitalize  rounded-2xl mt-12  ">
-              <span className="text-[#000000ab]">Let’s work</span> together!
+            <h1 className="mt-12 flex items-center">
+               <span className="text-[3vw] text-[#000000] font-bold relative  grotesk px-14 capitalize  rounded-2xl   ">
+                {text}
+               </span>
+               <span className="text-[3vw]">
+                <Cursor cursorColor="purple" cursorStyle="<"  cursorBlinking="B3oolean"/>
+               </span>
             </h1>
           </div>
-          <div >
-            <p className="text-[#fff] text-[2vw] capitalize font-bold ">
+          <div className="border p-5 bg-[#0000004d] rounded-3xl hover:bg-slate-950">
+            <p className="text-[#fff] text-[25px] capitalize font-semibold ">
               Want to stay in the loop?
             </p>
             <h1 className="text-5xl font-bold  mt-5 leading-relaxed  flex gap-4  capitalize text-[#ffffff] ">
               Drop your email to <span>get latest updates </span>
             </h1>
-            <h1 className="text-[2vw] font-bold text-white   leading-relaxed flex gap-6 justify-center items-center capitalize ">
-              from <span className="jostack text-[4vw]">Jostack</span>
+            <h1 className="text-[2vw] font-semibold text-white   leading-relaxed flex gap-6 items-center capitalize ">
+              from <span className="jostack text-[3vw]">Jostack</span>
             </h1>
             <div className="flex items-center mt-8  p-10 w-4/5">
               <label className="input input-bordered flex items-center gap-2 w-full bg-[#fbfbfbd8]">

@@ -1,9 +1,20 @@
 import React from "react";
 import { FaTelegram, FaLinkedin } from "react-icons/fa";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
+
+  // Check if the current route is "/projects"
+  const isProjectsRoute = location.pathname === "/projects";
   return (
-    <div className=" grotesk p-20 mt-7">
+    <div
+      className={` grotesk p-20  ${
+        isProjectsRoute
+          ? "bg-[#141517] text-white -mt-1"
+          : "bg-white text-black mt-7"
+      }`}
+    >
       <div className="flex flex-col">
         <h1 className="text-5xl font-bold grotesk">Contact Information</h1>
       </div>
@@ -20,7 +31,13 @@ const Footer = () => {
           <code className="text-2xl">jostackservices@gmail.com</code>
         </div>
         <div>
-          <button className="btn btn-outline btn-primary text-2xl w-full">
+          <button
+            className={`btn btn-outline ${
+              isProjectsRoute
+                ? "border-white text-white hover:border-primary hover:bg-primary"
+                : "btn-primary"
+            } text-2xl w-full`}
+          >
             Get In Touch
           </button>
           <p className="text-lg mt-2">

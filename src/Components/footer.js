@@ -4,7 +4,7 @@ import { FaTelegram, FaLinkedin } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className=" grotesk p-20 mt-7">
-      <div className="flex flex-col justify-between h-5/6">
+      <div className="flex flex-col">
         <h1 className="text-5xl font-bold grotesk">Contact Information</h1>
       </div>
       <div className="flex justify-between mt-9">
@@ -13,7 +13,6 @@ const Footer = () => {
           <div className="flex gap-4 mt-4 ">
             <FaTelegram className="hover:text-primary" />
             <FaLinkedin className="hover:text-primary" />
-
           </div>
         </div>
         <div>

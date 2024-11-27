@@ -1,12 +1,15 @@
 import { useGSAP } from "@gsap/react";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import gsap from "gsap";
-
-//
+import { useLocation } from "react-router-dom";
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation();
+
+  // Check if the current route is "/projects"
+  const isProjectsRoute = location.pathname === "/projects";
   //  using gsap in navbar //
   useGSAP(() => {
     gsap.from(".navbar-end", {
@@ -38,7 +41,11 @@ const Navbar = () => {
   });
 
   return (
-    <div className="navbar  px-24 md:px-8 lg:px-16  ">
+    <div
+      className={`navbar px-24 md:px-8 lg:px-16  ${
+        isProjectsRoute ? "bg-[#141517] text-white" : "bg-white text-black"
+      }`}
+    >
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -73,37 +80,47 @@ const Navbar = () => {
 
         <Link
           to="/"
-          className="jostack grostesk text-2xl text-primary uppercase font-bold "
+          className={`jostack grostesk text-2xl ${
+            isProjectsRoute ? "text-white" : "text-primary"
+          } uppercase font-bold`}
         >
           jostack .
         </Link>
       </div>
       <div className="navbar-center  hidden lg:flex route">
-        <ul className="flex gap-10 text-primary  uppercase font-medium ">
+        <ul
+          className={`flex gap-10 ${
+            isProjectsRoute ? "text-white" : "text-primary"
+          } uppercase font-medium `}
+        >
           <li
-            className="home border-b-3 border-transparent relative transition-all duration-600 ease-linear 
-              after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:bg-primary
-              after:w-0 after:transition-all hover:after:w-full p-1  "
+            className={`border-b-3 border-transparent relative transition-all duration-600 ease-linear 
+              after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] ${
+                isProjectsRoute ? "after:bg-white" : "after:bg-primary"
+              }
+              after:w-0 after:transition-all hover:after:w-full p-1`}
           >
             <NavLink to="/">Home</NavLink>
           </li>
 
           <li
-            className="border-b-3 border-transparent relative transition-all duration-600 ease-linear 
-              after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:bg-primary 
-              after:w-0 after:transition-all hover:after:w-full p-1  "
+            className={`border-b-3 border-transparent relative transition-all duration-600 ease-linear 
+              after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] ${
+                isProjectsRoute ? "after:bg-white" : "after:bg-primary"
+              }
+              after:w-0 after:transition-all hover:after:w-full p-1`}
           >
             <NavLink to="/projects">Projects</NavLink>
           </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <a
-          href="/contact"
+        <NavLink
+          to="/contact"
           className="rounded-3x bg-primary px-3 py-1 rounded-xl text-white flex items-center gap-3"
         >
           Contact <FaArrowAltCircleRight />
-        </a>
+        </NavLink>
       </div>
     </div>
   );

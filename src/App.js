@@ -1,5 +1,5 @@
-import { useLayoutEffect } from "react";
-import { Outlet } from "react-router-dom";
+import { useLayoutEffect, useRef } from "react";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
@@ -8,22 +8,29 @@ import { ScrollTrigger } from "gsap/all";
 import Footer from "./Components/footer";
 
 function App() {
+  const location = useLocation();
+  const locoScrollRef = useRef(null);
+
   gsap.registerPlugin(ScrollTrigger);
+
   useLayoutEffect(() => {
-    const locoScroll = new LocomotiveScroll({
+    locoScrollRef.current = new LocomotiveScroll({
       el: document.querySelector(".smooth-scroll"),
       smooth: true,
       tablet: { smooth: true },
       smartphone: { smooth: true },
     });
 
-    locoScroll.on("scroll", ScrollTrigger.update);
+    locoScrollRef.current.on("scroll", ScrollTrigger.update);
 
     ScrollTrigger.scrollerProxy(".smooth-scroll", {
       scrollTop(value) {
         return arguments.length
-          ? locoScroll.scrollTo(value, { duration: 0, disableLerp: true })
-          : locoScroll.scroll.instance.scroll.y;
+          ? locoScrollRef.current.scrollTo(value, {
+              duration: 0,
+              disableLerp: true,
+            })
+          : locoScrollRef.current.scroll.instance.scroll.y;
       },
       getBoundingClientRect() {
         return {
@@ -34,12 +41,28 @@ function App() {
         };
       },
     });
-    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+    ScrollTrigger.addEventListener("refresh", () =>
+      locoScrollRef.current.update()
+    );
     ScrollTrigger.refresh();
+
     return () => {
-      ScrollTrigger.removeEventListener("refresh", () => locoScroll.update());
+      ScrollTrigger.removeEventListener("refresh", () =>
+        locoScrollRef.current.update()
+      );
+      locoScrollRef.current.destroy();
     };
   }, []);
+
+  useLayoutEffect(() => {
+    setTimeout(() => {
+      if (locoScrollRef.current) {
+        locoScrollRef.current.update();
+        ScrollTrigger.refresh();
+      }
+    });
+  }, [location]);
 
   return (
     <div className="App smooth-scroll">

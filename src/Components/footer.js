@@ -1,8 +1,58 @@
-import React from "react";
+import gsap from "gsap";
+import React, { useRef, useState } from "react";
 import { FaTelegram, FaLinkedin } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 
-const Footer = () => {
+const Footer = () => { 
+
+ 
+  const initialPath = "M 10 100 Q 500 100 1800 100";
+  const finalPath = "M 10 100 Q 500 100 1800 100";
+  
+  
+  // Reference to the SVG path element
+  const pathRef = useRef(null);
+
+  // State to keep track of the current path
+  const [path, setPath] = useState(initialPath);
+
+  // Handle mousemove event
+  const handleMouseMove = (event) => {
+    const { clientX: x, clientY: y } = event;
+    const newPath = `M 10 100 Q ${x} ${y} 1800 100`;
+    setPath(newPath);
+
+    // Animate the path change using GSAP
+    gsap.to(pathRef.current, {
+      attr: { d: newPath },
+      duration: 0.3,
+      ease: 'power3.out',
+    });
+  };
+
+  // Handle mouseleave event
+  const handleMouseLeave = () => {
+    setPath(finalPath);
+
+    // Animate the path back to the finalPath with elastic effect
+    gsap.to(pathRef.current, {
+      attr: { d: finalPath },
+      duration: 1.5,
+      ease: 'elastic.out(1, 0.2)',
+    });
+  };
+
+
+
+
+
+
+
+
+
+
+
+
   const location = useLocation();
 
   // Check if the current route is "/projects"
@@ -15,7 +65,32 @@ const Footer = () => {
           : "bg-white text-black mt-7"
       }`}
     >
-      <div className="flex flex-col">
+    
+    {/*  */} 
+   
+    
+      <svg 
+         onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+        className="lea"
+        width="100%"  // Ensure full width
+        height="300px" // Fixed height of 400px
+        viewBox="0 0 1800 300" // Increased the viewBox width for a longer path 
+        
+      >
+        <path
+          ref={pathRef}
+          d={path}
+          fill="transparent"
+          stroke="black"
+          strokeWidth="2"
+        />
+      </svg>
+    
+
+    {/*  */}
+
+      <div className="flex flex-col ">
         <h1 className="text-5xl font-bold grotesk">Contact Information</h1>
       </div>
       <div className="flex justify-between mt-9">
@@ -45,6 +120,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
+      
     </div>
   );
 };

@@ -10,6 +10,8 @@ const Navbar = () => {
 
   // Check if the current route is "/projects"
   const isProjectsRoute = location.pathname === "/projects";
+  // check if current route is "/contact"
+  const isContactRoute = location.pathname === "/contact";
   //  using gsap in navbar //
   useGSAP(() => {
     gsap.from(".navbar-end", {
@@ -42,9 +44,12 @@ const Navbar = () => {
 
   return (
     <div
-      className={`navbar px-24 md:px-8 lg:px-16  ${
-        isProjectsRoute ? "bg-[#141517] text-white" : "bg-white text-black"
-      }`}
+      className={`
+  navbar 
+  px-24 md:px-8 lg:px-16 
+  ${isProjectsRoute || isContactRoute ? "bg-[#141517] text-white" : "bg-white text-black"}
+`}
+
     >
       <div className="navbar-start">
         <div className="dropdown">
@@ -80,23 +85,20 @@ const Navbar = () => {
 
         <Link
           to="/"
-          className={`jostack grostesk text-2xl ${
-            isProjectsRoute ? "text-white" : "text-primary"
-          } uppercase font-bold`}
+          className={`jostack  text-2xl ${isProjectsRoute || isContactRoute ? "text-white" : "text-primary"
+            } uppercase font-bold`}
         >
           jostack .
         </Link>
       </div>
       <div className="navbar-center  hidden lg:flex route">
         <ul
-          className={`flex gap-10 ${
-            isProjectsRoute ? "text-white" : "text-primary"
-          } uppercase font-medium `}
+          className={`flex gap-10 ${isProjectsRoute || isContactRoute ? "text-white" : "text-primary"
+            } uppercase font-medium `}
         >
           <li
             className={`border-b-3 border-transparent relative transition-all duration-600 ease-linear 
-              after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] ${
-                isProjectsRoute ? "after:bg-white" : "after:bg-primary"
+              after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] ${isProjectsRoute || isContactRoute ? "after:bg-white" : "after:bg-primary"
               }
               after:w-0 after:transition-all hover:after:w-full p-1`}
           >
@@ -105,8 +107,7 @@ const Navbar = () => {
 
           <li
             className={`border-b-3 border-transparent relative transition-all duration-600 ease-linear 
-              after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] ${
-                isProjectsRoute ? "after:bg-white" : "after:bg-primary"
+              after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] ${isProjectsRoute ? "after:bg-white" : "after:bg-primary"
               }
               after:w-0 after:transition-all hover:after:w-full p-1`}
           >
@@ -114,7 +115,10 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="navbar-end">
+      <div className={`border-b-3 border-transparent relative transition-all duration-600 ease-linear 
+              after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] ${isContactRoute ? "after:bg-white" : "after:bg-primary"
+        }
+              after:w-0 after:transition-all hover:after:w-full p-1`}>
         <NavLink
           to="/contact"
           className="rounded-3x bg-primary px-3 py-1 rounded-xl text-white flex items-center gap-3"

@@ -43,7 +43,9 @@ function App() {
 
   return (
     <div className="App smooth-scroll">
-      <Navbar />
+     <div className="sticky top-0">
+      <Navbar/>
+     </div>
       <Outlet />
       <Footer />
     </div>

@@ -1,15 +1,29 @@
-import { useLayoutEffect, useRef } from "react";
+import { useState, useEffect, useLayoutEffect, useRef } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import Navbar from "./Components/Navbar";
-import LocomotiveScroll from "locomotive-scroll";
-import "locomotive-scroll/dist/locomotive-scroll.css";
+import { AnimatePresence, motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import LocomotiveScroll from "locomotive-scroll";
+import "locomotive-scroll/dist/locomotive-scroll.css";
+import Navbar from "./Components/Navbar";
 import Footer from "./Components/footer";
+import {
+  TransitionProvider,
+  useTransitionContext,
+} from "./context/TransitionContext";
 
 function App() {
   const location = useLocation();
   const locoScrollRef = useRef(null);
+  const { isAnimating, nextPath } = useTransitionContext();
+
+  const overlayVariants = {
+    initial: { x: "100%" },
+    animate: { x: 0 },
+    exit: { x: "-100%" },
+  };
+
+  const transition = { duration: 0.7, ease: "easeInOut" };
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -67,7 +81,26 @@ function App() {
   return (
     <div className="App smooth-scroll">
       <Navbar />
-      <Outlet />
+      <AnimatePresence mode="wait" initial={false}>
+        {isAnimating && (
+          <motion.div
+            key={nextPath}
+            variants={overlayVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={transition}
+            className="fixed top-0 left-0 w-full h-full bg-black z-[9999] flex justify-center "
+          >
+            <h1 className="text-white text-6xl capitalize h-screen place-content-center">
+              {nextPath === "/" ? "Home" : nextPath.slice(1)}
+            </h1>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      <div className="content-wrapper">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );

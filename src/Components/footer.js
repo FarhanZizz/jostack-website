@@ -2,6 +2,7 @@ import gsap from "gsap";
 import React, { useRef, useState } from "react";
 import { FaTelegram, FaLinkedin } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
+import CustomLink from "./CustomLink";
 
 const Footer = () => { 
 
@@ -106,7 +107,8 @@ const Footer = () => {
           <code className="text-2xl">jostackservices@gmail.com</code>
         </div>
         <div>
-          <button
+          <CustomLink
+            to="/contact"
             className={`btn btn-outline ${
               isProjectsRoute
                 ? "border-white text-white hover:border-primary hover:bg-primary"
@@ -114,7 +116,7 @@ const Footer = () => {
             } text-2xl w-full`}
           >
             Get In Touch
-          </button>
+          </CustomLink>
           <p className="text-lg mt-2">
             © 2024 Jostack Services. All rights reserved
           </p>

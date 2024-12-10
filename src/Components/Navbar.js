@@ -3,7 +3,7 @@ import { FaArrowAltCircleRight } from "react-icons/fa";
 import gsap from "gsap";
 import { useLocation } from "react-router-dom";
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import CustomLink from "./CustomLink";
 
 const Navbar = () => {
   const location = useLocation();
@@ -74,22 +74,22 @@ const Navbar = () => {
             className="menu dropdown-content bg-primary text-white rounded-box z-[1] mt-3 w-40 p-2 shadow"
           >
             <li>
-              <NavLink to="/">Home</NavLink>
+              <CustomLink to="/">Home</CustomLink>
             </li>
 
             <li>
-              <NavLink to="/projects">Projects</NavLink>
+              <CustomLink to="/projects">Projects</CustomLink>
             </li>
           </ul>
         </div>
 
-        <Link
+        <CustomLink
           to="/"
           className={`jostack  text-2xl ${isProjectsRoute || isContactRoute ? "text-white" : "text-primary"
             } uppercase font-bold`}
         >
           jostack .
-        </Link>
+        </CustomLink>
       </div>
       <div className="navbar-center  hidden lg:flex route">
         <ul
@@ -102,7 +102,7 @@ const Navbar = () => {
               }
               after:w-0 after:transition-all hover:after:w-full p-1`}
           >
-            <NavLink to="/">Home</NavLink>
+            <CustomLink to="/">Home</CustomLink>
           </li>
 
           <li
@@ -111,20 +111,17 @@ const Navbar = () => {
               }
               after:w-0 after:transition-all hover:after:w-full p-1`}
           >
-            <NavLink to="/projects">Projects</NavLink>
+            <CustomLink to="/projects">Projects</CustomLink>
           </li>
         </ul>
       </div>
-      <div className={`border-b-3 border-transparent relative transition-all duration-600 ease-linear 
-              after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] ${isContactRoute ? "after:bg-white" : "after:bg-primary"
-        }
-              after:w-0 after:transition-all hover:after:w-full p-1`}>
-        <NavLink
+      <div className="navbar-end">
+        <CustomLink
           to="/contact"
           className="rounded-3x bg-primary px-3 py-1 rounded-xl text-white flex items-center gap-3"
         >
           Contact <FaArrowAltCircleRight />
-        </NavLink>
+        </CustomLink>
       </div>
     </div>
   );

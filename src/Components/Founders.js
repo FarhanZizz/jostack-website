@@ -60,7 +60,7 @@ const Founders = () => {
   });
 
   return (
-    <div className="main   relative bg-white overflow-hidden z-0 my-20">
+    <div className="main  relative bg-white overflow-hidden z-0 my-20">
       {/* top */}
       <div className="top bg-[#141517]  h-[50%] w-full absolute top-[0%] overflow-hidden ">
         <h1 className="top-h flex justify-center relative top-[17rem] text-[250px] grotesk font-bold text-white">

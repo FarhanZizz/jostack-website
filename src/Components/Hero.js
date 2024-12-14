@@ -12,27 +12,26 @@ const Hero = () => {
       y: 50,
       opacity: 0,
       duration: 2,
-      delay: 3,
-      stagger: 0.3,
+      delay: 1,
+      stagger: 0.5,
     });
     gsap.from(".hero-details p", {
       y: 50,
       opacity: 0,
       duration: 1.6,
-      delay: 3.5,
-      stagger: 0.3,
+      delay: 1,
+      stagger: 0.5,
     });
     gsap.from(".btn-hero ", {
       x: -10,
       opacity: 0,
-      duration: 1.6,
-      delay: 3.6,
+      duration: 1,
+      delay: 1,
     });
     gsap.from(".svg", {
-      x: -550,
       opacity: 0.3,
-      delay: 2,
-      duration: 3,
+      delay: 3,
+      duration: 2.5,
     });
   });
 
@@ -47,18 +46,19 @@ const Hero = () => {
 
   return (
     <div className="">
-      <div className="hero-section max-w-[1500px] mx-auto flex justify-between  min-h-screen mt-44  ">
-        <div className=" hero-title  grotesk ">
-          <h1 className="text-9xl font-bold "> TRANSFORMING IDEAS </h1>
-          <h1 className="text-9xl font-bold  ">INTO DIGITAL </h1>
-          <h1 className="text-9xl font-bold  ">REALITY</h1>
+      <div className="hero-section max-w-[1500px] mx-auto lg:flex justify-between  min-h-screen lg:mt-44
+      mt-20  ">
+        <div className=" hero-title lg:text-left text-center grotesk ">
+          <h1 className="lg:text-9xl text-5xl font-bold "> TRANSFORMING IDEAS </h1>
+          <h1 className="lg:text-9xl text-5xl font-bold  ">INTO DIGITAL </h1>
+          <h1 className="lg:text-9xl text-5xl font-bold  ">REALITY</h1>
         </div>
 
         <div className="hero-details   text-[14px] space-y-2">
-          <div className="svg mb-32">
+          <div className="svg lg:mb-32 m-10">
             <Lottie options={defaultOptions} height={250} width={250} />
           </div>
-          <div className="text-[20px] max-w-xl capitalize">
+          <div className="text-[20px] lg:text-left text-center lg:p-0 p-4 max-w-xl capitalize">
             <p>
               At Jostack, we transform your ideas into digital reality with
               expert website
@@ -69,7 +69,7 @@ const Hero = () => {
             </p>
             <p> designed to elevate your business in the digital world.</p>
           </div>
-          <div className="flex items-center mt-4">
+          <div className="flex items-center lg:justify-normal justify-center lg:mt-4">
             <a
               href="/contact"
               className="btn-hero rounded-3x bg-primary px-3 py-1 rounded-xl text-white flex items-center gap-3"

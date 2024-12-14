@@ -7,10 +7,12 @@ import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/footer";
+// import ImageJos from "../src/assets/jos-removebg-preview.png"
 import {
   TransitionProvider,
   useTransitionContext,
 } from "./context/TransitionContext";
+import { useGSAP } from "@gsap/react";
 
 function App() {
   const location = useLocation();
@@ -78,6 +80,8 @@ function App() {
     });
   }, [location]);
 
+
+
   return (
     <div className="App smooth-scroll">
       <Navbar />
@@ -90,11 +94,13 @@ function App() {
             animate="animate"
             exit="exit"
             transition={transition}
-            className="fixed top-0 left-0 w-full h-full bg-black z-[9999] flex justify-center "
+            className="fixed  top-0 left-0 w-full h-full bg-[#141517] z-[9999] flex justify-center   "
           >
-            <h1 className="text-white text-6xl capitalize h-screen place-content-center">
+
+            <h1 className="text-white grotesk font-bold text-6xl capitalize  ">
               {nextPath === "/" ? "Home" : nextPath.slice(1)}
             </h1>
+
           </motion.div>
         )}
       </AnimatePresence>

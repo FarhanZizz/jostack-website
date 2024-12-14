@@ -45,13 +45,12 @@ const Navbar = () => {
   return (
     <div
       className={`
-  navbar 
-  px-24 md:px-8 lg:px-16 
+  flex justify-between lg:px-12 px-8 pt-2 items-center
   ${isProjectsRoute || isContactRoute ? "bg-[#141517] text-white" : "bg-white text-black"}
 `}
 
     >
-      <div className="navbar-start">
+      <div className="">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
@@ -91,7 +90,7 @@ const Navbar = () => {
           jostack .
         </CustomLink>
       </div>
-      <div className="navbar-center  hidden lg:flex route">
+      <div className=" hidden lg:flex ">
         <ul
           className={`flex gap-10 ${isProjectsRoute || isContactRoute ? "text-white" : "text-primary"
             } uppercase font-medium `}
@@ -115,7 +114,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="navbar-end">
+      <div className="">
         <CustomLink
           to="/contact"
           className="rounded-3x bg-primary px-3 py-1 rounded-xl text-white flex items-center gap-3"

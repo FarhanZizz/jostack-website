@@ -84,30 +84,30 @@ const Faq = () => {
         <div className="w-[60%] space-y-6">
           {/* First chat bubble */}
           <div className="chat chat-start">
-            <div className="chat-bubble text-3xl bg-gray-500 text-white grotesk">
+            <div className="chat-bubble lg:text-3xl text-4xl bg-gray-500 text-white grotesk">
               But what if I have questions about your services ?
             </div>
           </div>
 
           {/* Second chat bubble */}
           <div className="chat chat-end">
-            <div className="chat-bubble text-3xl  chat-bubble-primary text-white grotesk">
+            <div className="chat-bubble lg:text-3xl text-4xl  chat-bubble-primary text-white grotesk">
               Don't worry, we've got you covered {":)"}
             </div>
           </div>
         </div>
       </div>
-      <div className="p-20 ">
-        <div className="faq-container py-20 px-16 bg-primary border-black border-2 shadow-2xl rounded-3xl text-white grid grid-cols-2">
+      <div className="lg:p-20 p-1 ">
+        <div className="faq-container lg:py-20 py-10  lg:px-16 px-5 bg-primary border-black border-2 shadow-2xl rounded-3xl text-white lg:grid lg:grid-cols-2 ">
           <div className="faq-text">
-            <h1 className="text-4xl">Here's Some</h1>
-            <h1 className="text-8xl  leading-tight font-bold">
+            <h1 className="lg:text-4xl text-2xl lg:text-left text-center">Here's Some</h1>
+            <h1 className="lg:text-8xl text-4xl lg:text-left text-center  leading-tight font-bold">
               <span className="underline">F</span>requently <br />{" "}
               <span className="underline">A</span>sked <br />{" "}
               <span className="underline">Q</span>uestions
             </h1>
           </div>
-          <div className=" grid grid-cols-1 gap-20">
+          <div className="lg:mt-0 mt-10 grid grid-cols-1 gap-20">
             <div className="faq-1 collapse collapse-plus rounded-none border-b-4 border-white ">
               <input type="checkbox" />
               <div className="collapse-title text-3xl font-medium">

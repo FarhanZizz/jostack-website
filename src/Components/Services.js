@@ -30,26 +30,26 @@ const Services = () => {
 
   return (
     <div className="service-main relative min-h-[150vh] w-[100%]  smooth-scroll">
-      <div className="text-service md:uppercase relative text-[6vh] text-white font-semibold flex flex-col items-center justify-center min-h-screen grotesk">
+      <div className="text-service uppercase relative lg:text-[6vh] text-[40px] text-white font-semibold flex flex-col items-center justify-center min-h-screen grotesk ">
         let's begin with{" "}
-        <span className="text-[9vh] jostack text-primary px-12 py-1 bg-[#ffffffee] rounded-3xl">
+        <span className="lg:text-[9vh] jostack text-primary lg:m-0 m-5 px-12 py-1 bg-[#ffffffee] rounded-3xl">
           jostack
         </span>
       </div>
 
       <div
-        className="absolute top-[250%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-[#999999]  w-[80%] rounded-xl"
+        className="absolute top-[250%] left-[50%]  -translate-x-[50%] -translate-y-[50%] bg-[#999999]  lg:w-[80%] w-full  rounded-xl "
         id="card-1"
       >
-        <div className="grid grid-cols-3  h-full items-center">
-          <div className="col-span-2 p-16">
-            <h1 className="text-6xl text-white font-bold md:uppercase grotesk">
+        <div className="lg:grid grid-cols-3  h-full items-center">
+          <div className="col-span-2 lg:p-16 p-10">
+            <h1 className="lg:text-6xl text-3xl text-white font-bold uppercase grotesk">
               Website Building
             </h1>
-            <h1 className="text-3xl text-primary mt-5">
+            <h1 className="lg:text-3xl text-2xl text-primary mt-5">
               Crafted from Scratch to Success
             </h1>
-            <p className="text-3xl mt-5 leading-loose ">
+            <p className="lg:text-3xl text-2xl mt-5 leading-loose ">
               We design and develop fully tailored websites to create a{" "}
               <span className="bg-primary text-white px-2 py-1 rounded-xl capitalize">
                 unique digital identity
@@ -65,21 +65,21 @@ const Services = () => {
       </div>
 
       <div
-        className="absolute top-[230%] left-[50%] text-white  -translate-x-[50%] -translate-y-[50%] bg-[#2f463e]  w-[80%] rounded-xl"
+        className="absolute top-[230%] left-[50%] text-white  -translate-x-[50%] -translate-y-[50%] bg-[#2f463e]  lg:w-[80%] w-full rounded-xl"
         id="card-2"
       >
-        <div className="grid grid-cols-3  h-full items-center">
-          <div className="col-span-2 p-16">
-            <h1 className="text-6xl  font-bold md:uppercase grotesk">
+        <div className="lg:grid grid-cols-3  h-full items-center">
+          <div className="col-span-2 lg:p-16 p-10">
+            <h1 className="lg:text-6xl text-3xl  font-bold md:uppercase grotesk">
               Website Branding
             </h1>
-            <h1 className="text-3xl mt-5 ">
+            <h1 className="lg:text-3xl text-2xl mt-5 ">
               A brand that leaves a{" "}
               <span className="bg-primary  px-2 py-1 rounded-xl capitalize">
                 lasting impression
               </span>{" "}
             </h1>
-            <p className="text-3xl mt-5 leading-loose ">
+            <p className="lg:text-3xl text-2xl mt-5 leading-loose ">
               From logo design to color schemes we ensure every detail aligns
               with your{" "}
               <span className="bg-primary  px-2 py-1 rounded-xl capitalize">
@@ -96,21 +96,21 @@ const Services = () => {
       </div>
 
       <div
-        className="absolute top-[230%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-[#101d2e]  w-[80%] rounded-xl text-white"
+        className="absolute top-[230%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-[#101d2e]  lg:w-[80%] w-full rounded-xl text-white"
         id="card-3"
       >
-        <div className="grid grid-cols-3  h-full items-center">
-          <div className="col-span-2 p-16">
-            <h1 className="text-6xl  font-bold md:uppercase grotesk">
+        <div className="lg:grid grid-cols-3  h-full items-center">
+          <div className="col-span-2 lg:p-16 p-10">
+            <h1 className="lg:text-6xl text-3xl  font-bold md:uppercase grotesk">
               Website Maintenance
             </h1>
-            <h1 className="text-3xl  mt-5">
+            <h1 className="lg:text-3xl text-2xl mt-5">
               <span className="bg-primary  px-2 py-1 rounded-xl capitalize">
                 Hassle-free upkeep
               </span>{" "}
               for a high-performing website.
             </h1>
-            <p className="text-3xl mt-5 leading-loose ">
+            <p className="lg:text-3xl text-2xl mt-5 leading-loose ">
               Our team manages regular security updates, speed optimization, and{" "}
               <span className="bg-primary  px-2 py-1 rounded-xl capitalize">
                 technical support

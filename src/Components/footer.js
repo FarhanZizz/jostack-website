@@ -4,13 +4,13 @@ import { FaTelegram, FaLinkedin } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 import CustomLink from "./CustomLink";
 
-const Footer = () => { 
+const Footer = () => {
 
- 
+
   const initialPath = "M 10 100 Q 500 100 1800 100";
   const finalPath = "M 10 100 Q 500 100 1800 100";
-  
-  
+
+
   // Reference to the SVG path element
   const pathRef = useRef(null);
 
@@ -60,24 +60,23 @@ const Footer = () => {
   const isProjectsRoute = location.pathname === "/projects";
   return (
     <div
-      className={` grotesk p-20  ${
-        isProjectsRoute
-          ? "bg-[#141517] text-white -mt-1"
-          : "bg-white text-black mt-7"
-      }`}
+      className={` grotesk lg:p-20 p-5  ${isProjectsRoute
+        ? "bg-[#141517] text-white -mt-1"
+        : "bg-white text-black mt-7"
+        }`}
     >
-    
-    {/*  */} 
-   
-    
-      <svg 
-         onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
+
+      {/*  */}
+
+
+      <svg
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
         className="lea"
         width="100%"  // Ensure full width
         height="300px" // Fixed height of 400px
         viewBox="0 0 1800 300" // Increased the viewBox width for a longer path 
-        
+
       >
         <path
           ref={pathRef}
@@ -87,14 +86,14 @@ const Footer = () => {
           strokeWidth="2"
         />
       </svg>
-    
 
-    {/*  */}
 
-      <div className="flex flex-col ">
-        <h1 className="text-5xl font-bold grotesk">Contact Information</h1>
+      {/*  */}
+
+      <div className="lg:flex flex-col ">
+        <h1 className="lg:text-5xl text-3xl font-bold grotesk ">Contact Information</h1>
       </div>
-      <div className="flex justify-between mt-9">
+      <div className="lg:flex justify-between lg:space-y-0 space-y-7  mt-9">
         <div className="text-3xl">
           <h1>Socials</h1>
           <div className="flex gap-4 mt-4 ">
@@ -109,11 +108,10 @@ const Footer = () => {
         <div>
           <CustomLink
             to="/contact"
-            className={`btn btn-outline ${
-              isProjectsRoute
-                ? "border-white text-white hover:border-primary hover:bg-primary"
-                : "btn-primary"
-            } text-2xl w-full`}
+            className={`btn btn-outline ${isProjectsRoute
+              ? "border-white text-white hover:border-primary hover:bg-primary"
+              : "btn-primary"
+              } text-2xl w-full`}
           >
             Get In Touch
           </CustomLink>
@@ -122,7 +120,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      
+
     </div>
   );
 };

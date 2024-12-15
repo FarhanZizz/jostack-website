@@ -63,7 +63,7 @@ const Founders = () => {
     <div className="main  relative bg-white overflow-hidden z-0 my-20">
       {/* top */}
       <div className="top bg-[#141517]  h-[50%] w-full absolute top-[0%] overflow-hidden ">
-        <h1 className="top-h flex justify-center relative top-[17rem] text-[250px] grotesk font-bold text-white">
+        <h1 className="top-h flex justify-center relative lg:top-[17rem] top-[88.22%] lg:text-[250px] text-[70px] grotesk font-bold text-white">
           FOUNDERS
         </h1>
       </div>
@@ -180,7 +180,7 @@ const Founders = () => {
 
       {/* bottom */}
       <div className="bottom bg-[#141517] w-full h-[50vh] absolute bottom-[0%] overflow-hidden">
-        <h1 className="bottom-h flex justify-center relative bottom-[13rem] text-[250px] grotesk font-bold text-white">
+        <h1 className="bottom-h flex justify-center relative lg:bottom-[13rem] bottom-[5rem] lg:text-[250px] text-[70px] grotesk font-bold text-white">
           FOUNDERS
         </h1>
       </div>

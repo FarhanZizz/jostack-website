@@ -17,7 +17,7 @@ const CustomLink = ({ to, children, className, ...rest }) => {
       navigate(to);
       setIsAnimating(false);
       setAnimationDone(true);
-    }, 700); // Match animation duration
+    }, 2000); // Match animation duration
   };
 
   return (

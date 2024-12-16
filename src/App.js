@@ -1,4 +1,4 @@
-import { useState, useEffect, useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import gsap from "gsap";
@@ -7,25 +7,43 @@ import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/footer";
-// import ImageJos from "../src/assets/jos-removebg-preview.png"
-import {
-  TransitionProvider,
-  useTransitionContext,
-} from "./context/TransitionContext";
-import { useGSAP } from "@gsap/react";
+import { useTransitionContext } from "./context/TransitionContext";
+import logo from "./assets/logo.png";
+import ShuffleText from "react-shuffle-text";
 
 function App() {
   const location = useLocation();
   const locoScrollRef = useRef(null);
   const { isAnimating, nextPath } = useTransitionContext();
 
-  const overlayVariants = {
-    initial: { x: "100%" },
-    animate: { x: 0 },
-    exit: { x: "-100%" },
+  const purpleDivVariants = {
+    initial: { y: "100%" },
+    animate: { y: "0%", transition: { duration: 0.6, ease: "easeInOut" } },
+    exit: { y: "-100%", transition: { duration: 1, ease: "easeInOut" } },
   };
 
-  const transition = { duration: 0.7, ease: "easeInOut" };
+  const blackDivVariants = {
+    initial: { x: "100%" },
+    animate: {
+      x: "0%",
+      transition: { duration: 0.8, ease: "easeInOut", delay: 0.8 },
+    },
+    exit: { x: "-100%", transition: { duration: 1, ease: "easeInOut" } },
+  };
+
+  const logoDivVariants = {
+    initial: { scale: 0.5, opacity: 0 },
+    animate: {
+      scale: 1,
+      opacity: 1,
+      transition: { duration: 0.5, ease: "easeOut", delay: 0.2 },
+    },
+    exit: {
+      scale: 0.8,
+      opacity: 0,
+      transition: { duration: 0.5, ease: "easeIn", delay: 0.8 },
+    },
+  };
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -43,9 +61,9 @@ function App() {
       scrollTop(value) {
         return arguments.length
           ? locoScrollRef.current.scrollTo(value, {
-            duration: 0,
-            disableLerp: true,
-          })
+              duration: 0,
+              disableLerp: true,
+            })
           : locoScrollRef.current.scroll.instance.scroll.y;
       },
       getBoundingClientRect() {
@@ -80,30 +98,63 @@ function App() {
     });
   }, [location]);
 
-
-
   return (
     <div className="App smooth-scroll">
       <Navbar />
       <AnimatePresence mode="wait" initial={false}>
         {isAnimating && (
-          <motion.div
-            key={nextPath}
-            variants={overlayVariants}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            transition={transition}
-            className="fixed  top-0 left-0 w-full h-full bg-[#141517] z-[9999] flex justify-center   "
-          >
+          <>
+            {/* Purple Transition */}
+            <motion.div
+              variants={purpleDivVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              className="fixed top-0 left-0 w-full h-full bg-primary z-[9990] flex items-center justify-center"
+            ></motion.div>
 
-            <h1 className="text-white grotesk font-bold text-6xl capitalize  ">
-              {nextPath === "/" ? "Home" : nextPath.slice(1)}
-            </h1>
+            {/* Logo Animation */}
+            <motion.div
+              variants={logoDivVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              className="fixed top-0 left-0 w-full h-screen bg-transparent z-[9990] flex items-center justify-center"
+            >
+              <motion.img
+                src={logo}
+                alt="Logo"
+                className="w-1/4 md:w-[250px]"
+                whileHover={{ scale: 1.05 }}
+              />
+            </motion.div>
 
-          </motion.div>
+            {/* Black Transition */}
+            <motion.div
+              variants={blackDivVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              className="fixed top-0 left-0 w-full h-screen bg-black z-[9998] flex items-center justify-center"
+            >
+              <h1 className="text-white text-6xl grotesk">
+                <ShuffleText
+                  charIncInterval={100}
+                  charFrameTime={80}
+                  content={
+                    nextPath === "/"
+                      ? "Home"
+                      : nextPath
+                          .slice(1)
+                          .replace(/^./, nextPath[1].toUpperCase())
+                  }
+                />
+              </h1>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
+
       <div className="content-wrapper">
         <Outlet />
       </div>

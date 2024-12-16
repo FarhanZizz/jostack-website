@@ -5,11 +5,8 @@ import { useLocation } from "react-router-dom";
 import CustomLink from "./CustomLink";
 
 const Footer = () => {
-
-
   const initialPath = "M 10 100 Q 500 100 1800 100";
   const finalPath = "M 10 100 Q 500 100 1800 100";
-
 
   // Reference to the SVG path element
   const pathRef = useRef(null);
@@ -27,7 +24,7 @@ const Footer = () => {
     gsap.to(pathRef.current, {
       attr: { d: newPath },
       duration: 0.3,
-      ease: 'power3.out',
+      ease: "power3.out",
     });
   };
 
@@ -39,44 +36,32 @@ const Footer = () => {
     gsap.to(pathRef.current, {
       attr: { d: finalPath },
       duration: 1.5,
-      ease: 'elastic.out(1, 0.2)',
+      ease: "elastic.out(1, 0.2)",
     });
   };
-
-
-
-
-
-
-
-
-
-
-
 
   const location = useLocation();
 
   // Check if the current route is "/projects"
   const isProjectsRoute = location.pathname === "/projects";
+  const isContactRoute = location.pathname === "/contact";
   return (
     <div
-      className={` grotesk lg:p-20 p-5  ${isProjectsRoute
-        ? "bg-[#141517] text-white -mt-1"
-        : "bg-white text-black mt-7"
-        }`}
+      className={` grotesk lg:p-20 p-5  ${
+        isProjectsRoute || isContactRoute
+          ? "bg-[#141517] text-white -mt-1"
+          : "bg-white text-black mt-7"
+      }`}
     >
-
       {/*  */}
-
 
       <svg
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         className="lea"
-        width="100%"  // Ensure full width
+        width="100%" // Ensure full width
         height="300px" // Fixed height of 400px
-        viewBox="0 0 1800 300" // Increased the viewBox width for a longer path 
-
+        viewBox="0 0 1800 300" // Increased the viewBox width for a longer path
       >
         <path
           ref={pathRef}
@@ -87,11 +72,12 @@ const Footer = () => {
         />
       </svg>
 
-
       {/*  */}
 
       <div className="lg:flex flex-col ">
-        <h1 className="lg:text-5xl text-3xl font-bold grotesk ">Contact Information</h1>
+        <h1 className="lg:text-5xl text-3xl font-bold grotesk ">
+          Contact Information
+        </h1>
       </div>
       <div className="lg:flex justify-between lg:space-y-0 space-y-7  mt-9">
         <div className="text-3xl">
@@ -108,10 +94,11 @@ const Footer = () => {
         <div>
           <CustomLink
             to="/contact"
-            className={`btn btn-outline ${isProjectsRoute
-              ? "border-white text-white hover:border-primary hover:bg-primary"
-              : "btn-primary"
-              } text-2xl w-full`}
+            className={`btn btn-outline ${
+              isProjectsRoute || isContactRoute
+                ? "border-white text-white hover:border-primary hover:bg-primary"
+                : "btn-primary"
+            } text-2xl w-full`}
           >
             Get In Touch
           </CustomLink>
@@ -120,7 +107,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-
     </div>
   );
 };

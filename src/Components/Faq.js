@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -7,6 +7,31 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 const Faq = () => {
+  useEffect(() => {
+    const faqItems = document.querySelectorAll(".collapse input");
+    faqItems.forEach((input) =>
+      input.addEventListener("change", () => {
+        setTimeout(() => {
+          ScrollTrigger.refresh();
+        }, 200); // Add delay to account for animation duration
+      })
+    );
+
+    return () => {
+      // Cleanup event listeners
+      faqItems.forEach((input) =>
+        input.removeEventListener("change", () => ScrollTrigger.refresh())
+      );
+    };
+  }, []);
+  const handleFaqToggle = (index) => {
+    const allCheckboxes = document.querySelectorAll(".collapse input");
+    allCheckboxes.forEach((checkbox, i) => {
+      if (i !== index) {
+        checkbox.checked = false;
+      }
+    });
+  };
   useGSAP(() => {
     var tl = gsap.timeline({
       scrollTrigger: {
@@ -100,7 +125,9 @@ const Faq = () => {
       <div className="lg:p-20 p-1 ">
         <div className="faq-container lg:py-20 py-10  lg:px-16 px-5 bg-primary border-black border-2 shadow-2xl rounded-3xl text-white lg:grid lg:grid-cols-2 ">
           <div className="faq-text">
-            <h1 className="lg:text-4xl text-2xl lg:text-left text-center">Here's Some</h1>
+            <h1 className="lg:text-4xl text-2xl lg:text-left text-center">
+              Here's Some
+            </h1>
             <h1 className="lg:text-8xl text-4xl lg:text-left text-center  leading-tight font-bold">
               <span className="underline">F</span>requently <br />{" "}
               <span className="underline">A</span>sked <br />{" "}
@@ -109,7 +136,7 @@ const Faq = () => {
           </div>
           <div className="lg:mt-0 mt-10 grid grid-cols-1 gap-20">
             <div className="faq-1 collapse collapse-plus rounded-none border-b-4 border-white ">
-              <input type="checkbox" />
+              <input type="checkbox" onClick={() => handleFaqToggle(0)} />
               <div className="collapse-title text-3xl font-medium">
                 What services does Jostack offer?
               </div>
@@ -124,7 +151,7 @@ const Faq = () => {
               </div>
             </div>
             <div className="faq-2 collapse collapse-plus rounded-none border-b-4 border-white ">
-              <input type="checkbox" />
+              <input type="checkbox" onClick={() => handleFaqToggle(1)} />
               <div className="collapse-title text-3xl font-medium">
                 What is the process for starting a project?
               </div>
@@ -137,7 +164,7 @@ const Faq = () => {
               </div>
             </div>
             <div className="faq-3 collapse collapse-plus rounded-none border-b-4 border-white ">
-              <input type="checkbox" />
+              <input type="checkbox" onClick={() => handleFaqToggle(2)} />
               <div className="collapse-title text-3xl font-medium">
                 Can Jostack manage my website?
               </div>
@@ -151,7 +178,7 @@ const Faq = () => {
               </div>
             </div>
             <div className="faq-4 collapse collapse-plus rounded-none border-b-4 border-white ">
-              <input type="checkbox" />
+              <input type="checkbox" onClick={() => handleFaqToggle(3)} />
               <div className="collapse-title text-3xl font-medium">
                 How long does a website project take?
               </div>

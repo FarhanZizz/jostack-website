@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import gsap from "gsap";
@@ -47,7 +47,7 @@ function App() {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     locoScrollRef.current = new LocomotiveScroll({
       el: document.querySelector(".smooth-scroll"),
       smooth: true,
@@ -89,13 +89,13 @@ function App() {
     };
   }, []);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setTimeout(() => {
       if (locoScrollRef.current) {
         locoScrollRef.current.update();
         ScrollTrigger.refresh();
       }
-    });
+    }, 200);
   }, [location]);
 
   return (

@@ -2,12 +2,12 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Home from "../Pages/Home";
 import Projects from "../Pages/Projects";
-import Contact from "../Components/contact";
+import Contact from "../Pages/Contact";
 
 const routes = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
     children: [
       {
         index: true,
@@ -18,9 +18,9 @@ const routes = createBrowserRouter([
         element: <Projects />,
       },
       {
-        path : "/contact" ,
-        element : <Contact/> ,
-      }
+        path: "/contact",
+        element: <Contact />,
+      },
     ],
   },
 ]);

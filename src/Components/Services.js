@@ -2,6 +2,7 @@ import React from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import CustomLink from "./CustomLink";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,9 +57,12 @@ const Services = () => {
               </span>{" "}
               for your brand, ensuring it stands out from the competition.
             </p>
-            <button className="btn btn-outline border-none btn-primary bg-white mt-5 font-bold grotesk text-2xl w-full">
+            <CustomLink
+              to={`/contact?service=${"Website Building"}`}
+              className="btn btn-outline border-none btn-primary bg-white mt-5 font-bold grotesk text-2xl w-full"
+            >
               Start Your Project
-            </button>
+            </CustomLink>
           </div>
           <div className="bg-white rounded-e-xl place-content-center"></div>
         </div>
@@ -87,9 +91,12 @@ const Services = () => {
               </span>{" "}
               and resonates with your target audience.
             </p>
-            <button className="btn btn-outline border-none btn-primary bg-white mt-5 font-bold grotesk text-2xl w-full">
+            <CustomLink
+              to={`/contact?service=${"Website Branding"}`}
+              className="btn btn-outline border-none btn-primary bg-white mt-5 font-bold grotesk text-2xl w-full"
+            >
               Create Your Brand
-            </button>
+            </CustomLink>
           </div>
           <div className="bg-white rounded-e-xl place-content-center"></div>
         </div>
@@ -117,9 +124,12 @@ const Services = () => {
               </span>{" "}
               to keep your website running smoothly.
             </p>
-            <button className="btn btn-outline border-none btn-primary bg-white mt-5 font-bold grotesk text-2xl w-full">
+            <CustomLink
+              to={`/contact?service=${"Website Maintenance"}`}
+              className="btn btn-outline border-none btn-primary bg-white mt-5 font-bold grotesk text-2xl w-full"
+            >
               Optimize Now
-            </button>
+            </CustomLink>
           </div>
           <div className="bg-white rounded-e-xl place-content-center"></div>
         </div>

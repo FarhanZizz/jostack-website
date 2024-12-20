@@ -104,7 +104,7 @@ const Contact = () => {
              w-full
              lg:w-[350px]
              h-[50px]
-             lg:text-[20px] 
+             lg:text-xl
              text-white
              bg-transparent 
              border-b-white 
@@ -118,7 +118,7 @@ const Contact = () => {
 
             {/* Second Input */}
             <div className="second-input lg:flex items-center gap-5">
-              <h1 className="lg:text-[27px] text-[19px] grotesk font-semibold">
+              <h1 className="lg:text-2xl text-lg grotesk font-semibold">
                 Cool! Whats Your mail address?
               </h1>
               <input
@@ -130,7 +130,7 @@ const Contact = () => {
              w-full
              lg:w-[350px]
              h-[50px]
-             lg:text-[20px] 
+             lg:text-xl 
              text-white
              bg-transparent 
              border-b-white 
@@ -145,7 +145,7 @@ const Contact = () => {
 
             {/* Third Input */}
             <div className="third-input lg:flex items-center gap-5">
-              <h1 className="lg:text-[27px] text-[19px] grotesk font-semibold">
+              <h1 className="lg:text-2xl text-lg grotesk font-semibold">
                 Which type of project you have?
               </h1>
               <select
@@ -155,7 +155,7 @@ const Contact = () => {
              w-full
              lg:w-[350px]
              h-[50px]
-             lg:text-[20px] 
+             lg:text-xl 
              text-white
             border-0
              bg-[#141517] 
@@ -188,7 +188,7 @@ const Contact = () => {
             </div>
             {/* Fourth Input */}
             <div className="fourth-input lg:flex items-center gap-5">
-              <h1 className="lg:text-[27px] text-[19px] grotesk font-semibold">
+              <h1 className="lg:text-2xl text-lg grotesk font-semibold">
                 Which Service you want to take?
               </h1>
               <select
@@ -200,7 +200,7 @@ const Contact = () => {
              w-full
              lg:w-[350px]
              h-[50px]
-             lg:text-[20px] 
+             lg:text-xl 
              text-white
             border-0
              bg-[#141517] 

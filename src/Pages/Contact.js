@@ -59,6 +59,8 @@ const Contact = () => {
             style: {
               background: "#281046",
               text: "#fff",
+              borderBottom: "1px solid #fff",
+              borderRadius: "0",
             },
           });
         }
@@ -146,16 +148,17 @@ const Contact = () => {
               <h1 className="lg:text-[27px] text-[19px] grotesk font-semibold">
                 Which type of project you have?
               </h1>
-              <input
+              <select
                 className="
+             hover:bg-none
              outline-none 
-             
              w-full
-             lg:w-[350px] 
+             lg:w-[350px]
              h-[50px]
-             text-[20px] 
+             lg:text-[20px] 
              text-white
-             bg-transparent 
+            border-0
+             bg-[#141517] 
              border-b-white 
              border-b-[1px]
              lg:text-center
@@ -164,7 +167,24 @@ const Contact = () => {
                 name="projectType"
                 placeholder="E-commerce"
                 required
-              ></input>
+              >
+                <option value="Ecommerce Website">E-commerce Website</option>
+                <option value="Portfolio Website">Portfolio Website</option>
+                <option value="Blog Website">Blog Website</option>
+                <option value="Educational Website">Educational Website</option>
+                <option value="Business Website">Business Website</option>
+                <option value="Event Website">Event Website</option>
+                <option value="News And Magazine Website">
+                  News and Magazine Website
+                </option>
+                <option value="Personal Website">Personal Website</option>
+                <option value="Travel And Booking Website">
+                  Travel and Booking Website
+                </option>
+                <option value="Others (Custom Website)">
+                  Others (Custom Website)
+                </option>
+              </select>
             </div>
             {/* Fourth Input */}
             <div className="fourth-input lg:flex items-center gap-5">
@@ -196,6 +216,7 @@ const Contact = () => {
                 <option value="Website Building">Website Building</option>
                 <option value="Website Branding">Website Branding</option>
                 <option value="Website Maintenance">Website Maintenance</option>
+                <option value="All Of The Above">All Of The Above</option>
               </select>
             </div>
           </section>

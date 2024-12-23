@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useTransitionContext } from "../context/TransitionContext";
 
 const CustomLink = ({ to, children, className, ...rest }) => {
@@ -21,9 +21,9 @@ const CustomLink = ({ to, children, className, ...rest }) => {
   };
 
   return (
-    <a href={to} onClick={handleClick} className={className} {...rest}>
+    <Link to={to} onClick={handleClick} className={className} {...rest}>
       {children}
-    </a>
+    </Link>
   );
 };
 

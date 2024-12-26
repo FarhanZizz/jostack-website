@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-#html {
-  background-color: #ffff;
-}
-
 .gradient-text {
   background: rgb(0, 0, 0);
   background: linear-gradient(
@@ -57,4 +53,3 @@ code {
 }
 
 /*  */
-

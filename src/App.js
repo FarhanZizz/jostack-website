@@ -16,35 +16,6 @@ function App() {
   const locoScrollRef = useRef(null);
   const { isAnimating, nextPath } = useTransitionContext();
 
-  const purpleDivVariants = {
-    initial: { y: "100%" },
-    animate: { y: "0%", transition: { duration: 0.6, ease: "easeInOut" } },
-    exit: { y: "-100%", transition: { duration: 1, ease: "easeInOut" } },
-  };
-
-  const blackDivVariants = {
-    initial: { x: "100%" },
-    animate: {
-      x: "0%",
-      transition: { duration: 0.8, ease: "easeInOut", delay: 0.8 },
-    },
-    exit: { x: "-100%", transition: { duration: 1, ease: "easeInOut" } },
-  };
-
-  const logoDivVariants = {
-    initial: { scale: 0.5, opacity: 0 },
-    animate: {
-      scale: 1,
-      opacity: 1,
-      transition: { duration: 0.5, ease: "easeOut", delay: 0.2 },
-    },
-    exit: {
-      scale: 0.8,
-      opacity: 0,
-      transition: { duration: 0.5, ease: "easeIn", delay: 0.8 },
-    },
-  };
-
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
@@ -90,6 +61,13 @@ function App() {
   }, []);
 
   useEffect(() => {
+    if (locoScrollRef.current) {
+      locoScrollRef.current.scrollTo(0, {
+        duration: 0,
+        disableLerp: true,
+      });
+    }
+
     setTimeout(() => {
       if (locoScrollRef.current) {
         locoScrollRef.current.update();
@@ -99,14 +77,23 @@ function App() {
   }, [location]);
 
   return (
-    <div className="App smooth-scroll">
-      <Navbar />
+    <div className="App">
       <AnimatePresence mode="wait" initial={false}>
         {isAnimating && (
           <>
             {/* Purple Transition */}
             <motion.div
-              variants={purpleDivVariants}
+              variants={{
+                initial: { y: "100%" },
+                animate: {
+                  y: "0%",
+                  transition: { duration: 0.6, ease: "easeInOut" },
+                },
+                exit: {
+                  y: "-100%",
+                  transition: { duration: 1, ease: "easeInOut" },
+                },
+              }}
               initial="initial"
               animate="animate"
               exit="exit"
@@ -115,7 +102,19 @@ function App() {
 
             {/* Logo Animation */}
             <motion.div
-              variants={logoDivVariants}
+              variants={{
+                initial: { scale: 0.5, opacity: 0 },
+                animate: {
+                  scale: 1,
+                  opacity: 1,
+                  transition: { duration: 0.5, ease: "easeOut", delay: 0.2 },
+                },
+                exit: {
+                  scale: 0.8,
+                  opacity: 0,
+                  transition: { duration: 0.5, ease: "easeIn", delay: 0.8 },
+                },
+              }}
               initial="initial"
               animate="animate"
               exit="exit"
@@ -131,7 +130,17 @@ function App() {
 
             {/* Black Transition */}
             <motion.div
-              variants={blackDivVariants}
+              variants={{
+                initial: { x: "100%" },
+                animate: {
+                  x: "0%",
+                  transition: { duration: 0.8, ease: "easeInOut", delay: 0.8 },
+                },
+                exit: {
+                  x: "-100%",
+                  transition: { duration: 1, ease: "easeInOut" },
+                },
+              }}
               initial="initial"
               animate="animate"
               exit="exit"
@@ -155,10 +164,13 @@ function App() {
         )}
       </AnimatePresence>
 
-      <div className="content-wrapper">
-        <Outlet />
+      <Navbar />
+      <div className="smooth-scroll">
+        <div className="content-wrapper">
+          <Outlet />
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }

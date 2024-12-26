@@ -3,7 +3,7 @@ import { FaArrowAltCircleRight } from "react-icons/fa";
 const Projects = () => {
   return (
     <div>
-      <div className="bg-[#141517] text-white -mt-1 lg:py-32 lg:px-20 p-5 py-16">
+      <div className="bg-[#141517] text-white -mt-1 lg:py-32 lg:px-20 p-5 py-28">
         <h1 className="text-3xl lg:text-6xl  font-semibold capitalize ">
           Our Projects
         </h1>

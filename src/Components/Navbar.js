@@ -20,24 +20,25 @@ const Navbar = () => {
       duration: 0.6,
       delay: 0.3,
     });
-    gsap.from(".hamburger", {
-      y: -10,
-      opacity: 0,
-      duration: 0.6,
-      delay: 0.3,
-    });
   });
 
   return (
     <div
-      className={`
-  flex justify-between lg:px-12 px-8 pt-2 items-center
-  ${
-    isProjectsRoute || isContactRoute
-      ? "bg-[#141517] text-white"
-      : "bg-white text-black"
-  }
-`}
+      style={{
+        backgroundColor: "transparent",
+        position: "fixed",
+        top: 0,
+        width: "100%",
+        zIndex: 50,
+        transition: "color 0.3s ease, background-color 0.3s ease",
+      }}
+      className={` flex justify-between lg:px-20 bg-none py-3 px-5 items-center
+      ${
+        isProjectsRoute || isContactRoute
+          ? "bg-[#141517] text-white"
+          : "bg-white text-black"
+      }
+    `}
     >
       <div className="">
         <div className="dropdown">
@@ -47,7 +48,7 @@ const Navbar = () => {
               className="svg h-5 w-5 hamburger"
               fill="none"
               viewBox="0 0 24 24"
-              stroke="currentColor"
+              stroke={isProjectsRoute || isContactRoute ? "white" : "#281046"}
             >
               <path
                 strokeLinecap="round"
@@ -59,13 +60,12 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu dropdown-content bg-primary text-white rounded-box z-[1] mt-3 w-40 p-2 shadow"
+            className="menu dropdown-content bg-primary text-white  z-[1] mt-3 w-52 shadow-2xl text-lg "
           >
-            <li>
+            <li className="hover:bg-white hover:text-primary focus:text-white">
               <CustomLink to="/">Home</CustomLink>
             </li>
-
-            <li>
+            <li className="hover:bg-white hover:text-primary">
               <CustomLink to="/projects">Projects</CustomLink>
             </li>
           </ul>
@@ -73,18 +73,18 @@ const Navbar = () => {
 
         <CustomLink
           to="/"
-          className={`jostack  text-2xl ${
+          className={`jostack text-2xl ${
             isProjectsRoute || isContactRoute ? "text-white" : "text-primary"
           } uppercase font-bold`}
         >
           jostack .
         </CustomLink>
       </div>
-      <div className=" hidden lg:flex ">
+      <div className="hidden lg:flex">
         <ul
           className={`flex gap-10 ${
             isProjectsRoute || isContactRoute ? "text-white" : "text-primary"
-          } uppercase font-medium `}
+          } uppercase font-medium`}
         >
           <li
             className={`border-b-3 border-transparent relative transition-all duration-600 ease-linear 

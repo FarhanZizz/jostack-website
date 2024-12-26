@@ -45,7 +45,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="lg:flex justify-between lg:px-20 lg:py-28 2xl:py-44 px-5">
+    <div className="lg:flex justify-between lg:px-20 py-28 2xl:py-44  px-5">
       <div className="hero-title lg:text-left text-center grotesk ">
         <h1 className="lg:text-8xl 2xl:text-9xl text-5xl font-bold uppercase">
           TRANSFORMING IDEAS <br /> INTO DIGITAL <br /> REALITY

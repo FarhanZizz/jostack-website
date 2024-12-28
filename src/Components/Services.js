@@ -30,108 +30,108 @@ const Services = () => {
   });
 
   return (
-    <div className="service-main relative min-h-[150vh] w-[100%]  smooth-scroll">
-      <div className="text-service uppercase relative lg:text-[6vh] text-[40px] text-white font-semibold flex flex-col items-center justify-center min-h-screen grotesk ">
+    <div className="service-main smooth-scroll relative min-h-[150vh] w-[100%]">
+      <div className="text-service grotesk relative flex min-h-screen flex-col items-center justify-center text-[40px] font-semibold uppercase text-white lg:text-[6vh]">
         let's begin with{" "}
-        <span className="lg:text-[9vh] jostack text-primary lg:m-0 m-5 px-12 py-1 bg-[#ffffffee] rounded-3xl">
+        <span className="jostack m-5 rounded-3xl bg-[#ffffffee] px-12 py-1 text-primary lg:m-0 lg:text-[9vh]">
           jostack
         </span>
       </div>
 
       <div
-        className="absolute top-[250%] left-[50%]  -translate-x-[50%] -translate-y-[50%] bg-[#999999]  lg:w-[80%] w-full  rounded-xl "
+        className="absolute left-[50%] top-[250%] w-full -translate-x-[50%] -translate-y-[50%] rounded-xl bg-[#999999] lg:w-[80%]"
         id="card-1"
       >
-        <div className="lg:grid grid-cols-3  h-full items-center">
-          <div className="col-span-2 lg:p-16 p-10">
-            <h1 className="lg:text-6xl text-3xl text-white font-bold uppercase grotesk">
+        <div className="h-full grid-cols-3 items-center lg:grid">
+          <div className="col-span-2 p-10 lg:p-16">
+            <h1 className="grotesk text-3xl font-bold uppercase text-white lg:text-6xl">
               Website Building
             </h1>
-            <h1 className="lg:text-3xl text-2xl text-primary mt-5">
+            <h1 className="mt-5 text-2xl text-primary lg:text-3xl">
               Crafted from Scratch to Success
             </h1>
-            <p className="lg:text-3xl text-2xl mt-5 leading-loose ">
+            <p className="mt-5 text-2xl leading-loose lg:text-3xl">
               We design and develop fully tailored websites to create a{" "}
-              <span className="bg-primary text-white px-2 py-1 rounded-xl capitalize">
+              <span className="rounded-xl bg-primary px-2 py-1 capitalize text-white">
                 unique digital identity
               </span>{" "}
               for your brand, ensuring it stands out from the competition.
             </p>
             <CustomLink
               to={`/contact?service=${"Website Building"}`}
-              className="btn btn-outline border-none btn-primary bg-white mt-5 font-bold grotesk text-2xl w-full"
+              className="grotesk btn btn-outline btn-primary mt-5 w-full border-none bg-white text-2xl font-bold"
             >
               Start Your Project
             </CustomLink>
           </div>
-          <div className="bg-white rounded-e-xl place-content-center"></div>
+          <div className="place-content-center rounded-e-xl bg-white"></div>
         </div>
       </div>
 
       <div
-        className="absolute top-[230%] left-[50%] text-white  -translate-x-[50%] -translate-y-[50%] bg-[#2f463e]  lg:w-[80%] w-full rounded-xl"
+        className="absolute left-[50%] top-[230%] w-full -translate-x-[50%] -translate-y-[50%] rounded-xl bg-[#2f463e] text-white lg:w-[80%]"
         id="card-2"
       >
-        <div className="lg:grid grid-cols-3  h-full items-center">
-          <div className="col-span-2 lg:p-16 p-10">
-            <h1 className="lg:text-6xl text-3xl  font-bold md:uppercase grotesk">
+        <div className="h-full grid-cols-3 items-center lg:grid">
+          <div className="col-span-2 p-10 lg:p-16">
+            <h1 className="grotesk text-3xl font-bold md:uppercase lg:text-6xl">
               Website Branding
             </h1>
-            <h1 className="lg:text-3xl text-2xl mt-5 ">
+            <h1 className="mt-5 text-2xl lg:text-3xl">
               A brand that leaves a{" "}
-              <span className="bg-primary  px-2 py-1 rounded-xl capitalize">
+              <span className="rounded-xl bg-primary px-2 py-1 capitalize">
                 lasting impression
               </span>{" "}
             </h1>
-            <p className="lg:text-3xl text-2xl mt-5 leading-loose ">
+            <p className="mt-5 text-2xl leading-loose lg:text-3xl">
               From logo design to color schemes we ensure every detail aligns
               with your{" "}
-              <span className="bg-primary  px-2 py-1 rounded-xl capitalize">
+              <span className="rounded-xl bg-primary px-2 py-1 capitalize">
                 brand’s personality
               </span>{" "}
               and resonates with your target audience.
             </p>
             <CustomLink
               to={`/contact?service=${"Website Branding"}`}
-              className="btn btn-outline border-none btn-primary bg-white mt-5 font-bold grotesk text-2xl w-full"
+              className="grotesk btn btn-outline btn-primary mt-5 w-full border-none bg-white text-2xl font-bold"
             >
               Create Your Brand
             </CustomLink>
           </div>
-          <div className="bg-white rounded-e-xl place-content-center"></div>
+          <div className="place-content-center rounded-e-xl bg-white"></div>
         </div>
       </div>
 
       <div
-        className="absolute top-[230%] left-[50%] -translate-x-[50%] -translate-y-[50%] bg-[#101d2e]  lg:w-[80%] w-full rounded-xl text-white"
+        className="absolute left-[50%] top-[230%] w-full -translate-x-[50%] -translate-y-[50%] rounded-xl bg-[#101d2e] text-white lg:w-[80%]"
         id="card-3"
       >
-        <div className="lg:grid grid-cols-3  h-full items-center">
-          <div className="col-span-2 lg:p-16 p-10">
-            <h1 className="lg:text-6xl text-3xl  font-bold md:uppercase grotesk">
+        <div className="h-full grid-cols-3 items-center lg:grid">
+          <div className="col-span-2 p-10 lg:p-16">
+            <h1 className="grotesk text-3xl font-bold md:uppercase lg:text-6xl">
               Website Maintenance
             </h1>
-            <h1 className="lg:text-3xl text-2xl mt-5">
-              <span className="bg-primary  px-2 py-1 rounded-xl capitalize">
+            <h1 className="mt-5 text-2xl lg:text-3xl">
+              <span className="rounded-xl bg-primary px-2 py-1 capitalize">
                 Hassle-free upkeep
               </span>{" "}
               for a high-performing website.
             </h1>
-            <p className="lg:text-3xl text-2xl mt-5 leading-loose ">
+            <p className="mt-5 text-2xl leading-loose lg:text-3xl">
               Our team manages regular security updates, speed optimization, and{" "}
-              <span className="bg-primary  px-2 py-1 rounded-xl capitalize">
+              <span className="rounded-xl bg-primary px-2 py-1 capitalize">
                 technical support
               </span>{" "}
               to keep your website running smoothly.
             </p>
             <CustomLink
               to={`/contact?service=${"Website Maintenance"}`}
-              className="btn btn-outline border-none btn-primary bg-white mt-5 font-bold grotesk text-2xl w-full"
+              className="grotesk btn btn-outline btn-primary mt-5 w-full border-none bg-white text-2xl font-bold"
             >
               Optimize Now
             </CustomLink>
           </div>
-          <div className="bg-white rounded-e-xl place-content-center"></div>
+          <div className="place-content-center rounded-e-xl bg-white"></div>
         </div>
       </div>
     </div>

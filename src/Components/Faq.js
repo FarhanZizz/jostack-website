@@ -14,13 +14,13 @@ const Faq = () => {
         setTimeout(() => {
           ScrollTrigger.refresh();
         }, 200); // Add delay to account for animation duration
-      })
+      }),
     );
 
     return () => {
       // Cleanup event listeners
       faqItems.forEach((input) =>
-        input.removeEventListener("change", () => ScrollTrigger.refresh())
+        input.removeEventListener("change", () => ScrollTrigger.refresh()),
       );
     };
   }, []);
@@ -72,7 +72,7 @@ const Faq = () => {
           y: 100,
           duration: 1,
         },
-        "+=1"
+        "+=1",
       );
 
     // FAQ animation
@@ -97,50 +97,50 @@ const Faq = () => {
     <div id="FAQ">
       <div
         id="rounded-div-wrapper"
-        className="w-full h-[100px] bg-[#141517] relative overflow-hidden mt-[-100px]"
+        className="relative mt-[-100px] h-[100px] w-full overflow-hidden bg-[#141517]"
       >
         <div
           id="rounded-div"
-          className="w-[150%] h-[750%] rounded-[50%] bg-white absolute left-[50%] -translate-x-[50%]  overflow-hidden "
+          className="absolute left-[50%] h-[750%] w-[150%] -translate-x-[50%] overflow-hidden rounded-[50%] bg-white"
         ></div>
       </div>
 
-      <div className="flex justify-center items-center min-h-screen chat-container ">
+      <div className="chat-container flex min-h-screen items-center justify-center">
         <div className="w-[60%] space-y-6">
           {/* First chat bubble */}
           <div className="chat chat-start">
-            <div className="chat-bubble lg:text-3xl text-4xl bg-gray-500 text-white grotesk">
+            <div className="grotesk chat-bubble bg-gray-500 text-4xl text-white lg:text-3xl">
               But what if I have questions about your services ?
             </div>
           </div>
 
           {/* Second chat bubble */}
           <div className="chat chat-end">
-            <div className="chat-bubble lg:text-3xl text-4xl  chat-bubble-primary text-white grotesk">
+            <div className="grotesk chat-bubble chat-bubble-primary text-4xl text-white lg:text-3xl">
               Don't worry, we've got you covered {":)"}
             </div>
           </div>
         </div>
       </div>
-      <div className="lg:p-20 p-1 ">
-        <div className="faq-container lg:py-20 py-10  lg:px-16 px-5 bg-primary border-black border-2 shadow-2xl rounded-3xl text-white lg:grid lg:grid-cols-2 ">
+      <div className="p-1 lg:p-20">
+        <div className="faq-container rounded-3xl border-2 border-black bg-primary px-5 py-10 text-white shadow-2xl lg:grid lg:grid-cols-2 lg:px-16 lg:py-20">
           <div className="faq-text">
-            <h1 className="lg:text-4xl text-2xl lg:text-left text-center">
+            <h1 className="text-center text-2xl lg:text-left lg:text-4xl">
               Here's Some
             </h1>
-            <h1 className="lg:text-8xl text-4xl lg:text-left text-center  leading-tight font-bold">
+            <h1 className="text-center text-4xl font-bold leading-tight lg:text-left lg:text-8xl">
               <span className="underline">F</span>requently <br />{" "}
               <span className="underline">A</span>sked <br />{" "}
               <span className="underline">Q</span>uestions
             </h1>
           </div>
-          <div className="lg:mt-0 mt-10 grid grid-cols-1 gap-20">
-            <div className="faq-1 collapse collapse-plus rounded-none border-b-4 border-white ">
+          <div className="mt-10 grid grid-cols-1 gap-20 lg:mt-0">
+            <div className="faq-1 collapse collapse-plus rounded-none border-b-4 border-white">
               <input type="checkbox" onClick={() => handleFaqToggle(0)} />
               <div className="collapse-title text-3xl font-medium">
                 What services does Jostack offer?
               </div>
-              <div className="collapse-content text-2xl px-5">
+              <div className="collapse-content px-5 text-2xl">
                 <p>
                   Jostack provides a range of business services including
                   website building, management, video editing, and ad promotion.
@@ -150,12 +150,12 @@ const Faq = () => {
                 </p>
               </div>
             </div>
-            <div className="faq-2 collapse collapse-plus rounded-none border-b-4 border-white ">
+            <div className="faq-2 collapse collapse-plus rounded-none border-b-4 border-white">
               <input type="checkbox" onClick={() => handleFaqToggle(1)} />
               <div className="collapse-title text-3xl font-medium">
                 What is the process for starting a project?
               </div>
-              <div className="collapse-content text-2xl px-5">
+              <div className="collapse-content px-5 text-2xl">
                 <p>
                   Starting a project is simple! Contact us to discuss your
                   project goals and needs, after which we’ll provide a detailed
@@ -163,12 +163,12 @@ const Faq = () => {
                 </p>
               </div>
             </div>
-            <div className="faq-3 collapse collapse-plus rounded-none border-b-4 border-white ">
+            <div className="faq-3 collapse collapse-plus rounded-none border-b-4 border-white">
               <input type="checkbox" onClick={() => handleFaqToggle(2)} />
               <div className="collapse-title text-3xl font-medium">
                 Can Jostack manage my website?
               </div>
-              <div className="collapse-content text-2xl px-5">
+              <div className="collapse-content px-5 text-2xl">
                 <p>
                   Yes, Jostack offers ongoing website management services,
                   handling everything from regular updates and security checks
@@ -177,12 +177,12 @@ const Faq = () => {
                 </p>
               </div>
             </div>
-            <div className="faq-4 collapse collapse-plus rounded-none border-b-4 border-white ">
+            <div className="faq-4 collapse collapse-plus rounded-none border-b-4 border-white">
               <input type="checkbox" onClick={() => handleFaqToggle(3)} />
               <div className="collapse-title text-3xl font-medium">
                 How long does a website project take?
               </div>
-              <div className="collapse-content text-2xl px-5">
+              <div className="collapse-content px-5 text-2xl">
                 <p>
                   Project timelines vary based on requirements, but our typical
                   website development projects range from two to four weeks.

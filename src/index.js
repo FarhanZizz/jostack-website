@@ -14,7 +14,7 @@ root.render(
       <RouterProvider router={routes} />
       <Toaster />
     </TransitionProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 reportWebVitals();

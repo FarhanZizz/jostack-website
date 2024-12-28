@@ -48,13 +48,13 @@ function App() {
     });
 
     ScrollTrigger.addEventListener("refresh", () =>
-      locoScrollRef.current.update()
+      locoScrollRef.current.update(),
     );
     ScrollTrigger.refresh();
 
     return () => {
       ScrollTrigger.removeEventListener("refresh", () =>
-        locoScrollRef.current.update()
+        locoScrollRef.current.update(),
       );
       locoScrollRef.current.destroy();
     };
@@ -97,7 +97,7 @@ function App() {
               initial="initial"
               animate="animate"
               exit="exit"
-              className="fixed top-0 left-0 w-full h-full bg-primary z-[9990] flex items-center justify-center"
+              className="fixed left-0 top-0 z-[9990] flex h-full w-full items-center justify-center bg-primary"
             ></motion.div>
 
             {/* Logo Animation */}
@@ -118,7 +118,7 @@ function App() {
               initial="initial"
               animate="animate"
               exit="exit"
-              className="fixed top-0 left-0 w-full h-screen bg-transparent z-[9990] flex items-center justify-center"
+              className="fixed left-0 top-0 z-[9990] flex h-screen w-full items-center justify-center bg-transparent"
             >
               <motion.img
                 src={logo}
@@ -144,9 +144,9 @@ function App() {
               initial="initial"
               animate="animate"
               exit="exit"
-              className="fixed top-0 left-0 w-full h-screen bg-black z-[9998] flex items-center justify-center"
+              className="fixed left-0 top-0 z-[9998] flex h-screen w-full items-center justify-center bg-black"
             >
-              <h1 className="text-white text-6xl grotesk">
+              <h1 className="grotesk text-6xl text-white">
                 <ShuffleText
                   charIncInterval={100}
                   charFrameTime={80}

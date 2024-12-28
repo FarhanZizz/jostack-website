@@ -41,7 +41,7 @@ const Contact = () => {
         "service_jostack",
         "template_jostack",
         formRef.current,
-        "e1PhT7BYMYbukEgf9"
+        "e1PhT7BYMYbukEgf9",
       )
       .then(
         (result) => {
@@ -63,7 +63,7 @@ const Contact = () => {
               borderRadius: "0",
             },
           });
-        }
+        },
       );
 
     e.target.reset();
@@ -74,96 +74,56 @@ const Contact = () => {
     <form
       ref={formRef}
       onSubmit={handleSubmit}
-      className="bg-[#141517]  lg:py-32 lg:px-20 p-5 py-28 text-white lg:grid grid-cols-3 justify-between -mt-1"
+      className="-mt-1 grid-cols-3 justify-between bg-[#141517] p-5 py-28 text-white lg:grid lg:px-20 lg:py-32"
     >
       <section className="text-contact col-span-2">
-        <h1 className=" text-3xl lg:text-6xl  font-semibold capitalize">
+        <h1 className="text-3xl font-semibold capitalize lg:text-6xl">
           Fill out the form!
         </h1>
-        <p className="mt-5 lg:text-2xl text-lg capitalize">
+        <p className="mt-5 text-lg capitalize lg:text-2xl">
           Have questions or need assistance? please take a moment to fill out a
           short form. This will give you{" "}
-          <span className="bg-primary  rounded font-semibold px-2">
+          <span className="rounded bg-primary px-2 font-semibold">
             direct access to all our services
           </span>{" "}
           and make it easier to connect with our team
         </p>
-        <div className=" mt-20 lg:flex justify-between items-center form">
-          <section className="space-y-20 inputs">
+        <div className="form mt-20 items-center justify-between lg:flex">
+          <section className="inputs space-y-20">
             {/* First Input */}
-            <div className="first-input lg:flex items-center  gap-5">
-              <h1 className="lg:text-2xl text-lg grotesk font-semibold">
+            <div className="first-input items-center gap-5 lg:flex">
+              <h1 className="grotesk text-lg font-semibold lg:text-2xl">
                 What should we call you?
               </h1>
               <input
                 name="name"
                 required
-                className="
-             outline-none 
-              
-             w-full
-             lg:w-[350px]
-             h-[50px]
-             lg:text-xl
-             text-white
-             bg-transparent 
-             border-b-white 
-             border-b-[1px]
-             lg:text-center
-             rounded-none
-            "
+                className="h-[50px] w-full rounded-none border-b-[1px] border-b-white bg-transparent text-white outline-none lg:w-[350px] lg:text-center lg:text-xl"
                 placeholder="Enter your Name"
               ></input>
             </div>
 
             {/* Second Input */}
-            <div className="second-input lg:flex items-center gap-5">
-              <h1 className="lg:text-2xl text-lg grotesk font-semibold">
+            <div className="second-input items-center gap-5 lg:flex">
+              <h1 className="grotesk text-lg font-semibold lg:text-2xl">
                 Cool! Whats Your mail address?
               </h1>
               <input
                 name="email"
                 type="email"
-                className="
-             outline-none 
-              
-             w-full
-             lg:w-[350px]
-             h-[50px]
-             lg:text-xl 
-             text-white
-             bg-transparent 
-             border-b-white 
-             border-b-[1px]
-             lg:text-center
-             rounded-none
-            "
+                className="h-[50px] w-full rounded-none border-b-[1px] border-b-white bg-transparent text-white outline-none lg:w-[350px] lg:text-center lg:text-xl"
                 placeholder="email@gmail.com"
                 required
               ></input>
             </div>
 
             {/* Third Input */}
-            <div className="third-input lg:flex items-center gap-5">
-              <h1 className="lg:text-2xl text-lg grotesk font-semibold">
+            <div className="third-input items-center gap-5 lg:flex">
+              <h1 className="grotesk text-lg font-semibold lg:text-2xl">
                 Which type of project you have?
               </h1>
               <select
-                className="
-             hover:bg-none
-             outline-none 
-             w-full
-             lg:w-[350px]
-             h-[50px]
-             lg:text-xl 
-             text-white
-            border-0
-             bg-[#141517] 
-             border-b-white 
-             border-b-[1px]
-             lg:text-center
-             rounded-none
-            "
+                className="h-[50px] w-full rounded-none border-0 border-b-[1px] border-b-white bg-[#141517] text-white outline-none hover:bg-none lg:w-[350px] lg:text-center lg:text-xl"
                 name="projectType"
                 placeholder="E-commerce"
                 required
@@ -187,28 +147,14 @@ const Contact = () => {
               </select>
             </div>
             {/* Fourth Input */}
-            <div className="fourth-input lg:flex items-center gap-5">
-              <h1 className="lg:text-2xl text-lg grotesk font-semibold">
+            <div className="fourth-input items-center gap-5 lg:flex">
+              <h1 className="grotesk text-lg font-semibold lg:text-2xl">
                 Which Service you want to take?
               </h1>
               <select
                 onChange={(e) => setPreSelectedService(e.target.value)}
                 value={preSelectedService || ""}
-                className="
-                hover:bg-none
-             outline-none 
-             w-full
-             lg:w-[350px]
-             h-[50px]
-             lg:text-xl 
-             text-white
-            border-0
-             bg-[#141517] 
-             border-b-white 
-             border-b-[1px]
-             lg:text-center
-             rounded-none
-            "
+                className="h-[50px] w-full rounded-none border-0 border-b-[1px] border-b-white bg-[#141517] text-white outline-none hover:bg-none lg:w-[350px] lg:text-center lg:text-xl"
                 name="service"
                 placeholder="Website Building"
                 required
@@ -222,32 +168,32 @@ const Contact = () => {
           </section>
         </div>
       </section>
-      <div className="grid grid-cols-1 gap-5 items-center justify-center text-center">
-        <h1 className="text-7xl grotesk hidden lg:block">
+      <div className="grid grid-cols-1 items-center justify-center gap-5 text-center">
+        <h1 className="grotesk hidden text-7xl lg:block">
           <ShuffleText charFrameTime={80} content="J" />
         </h1>
-        <h1 className="text-7xl grotesk hidden lg:block">
+        <h1 className="grotesk hidden text-7xl lg:block">
           <ShuffleText charFrameTime={100} content="O" />
         </h1>
-        <h1 className="text-7xl grotesk hidden lg:block">
+        <h1 className="grotesk hidden text-7xl lg:block">
           <ShuffleText charFrameTime={120} content="S" />
         </h1>
-        <h1 className="text-7xl grotesk hidden lg:block">
+        <h1 className="grotesk hidden text-7xl lg:block">
           <ShuffleText charFrameTime={140} content="T" />
         </h1>
-        <h1 className="text-7xl grotesk hidden lg:block">
+        <h1 className="grotesk hidden text-7xl lg:block">
           <ShuffleText charFrameTime={160} content="A" />
         </h1>
-        <h1 className="text-7xl grotesk hidden lg:block">
+        <h1 className="grotesk hidden text-7xl lg:block">
           <ShuffleText charFrameTime={180} content="C" />
         </h1>
-        <h1 className="text-7xl grotesk hidden lg:block">
+        <h1 className="grotesk hidden text-7xl lg:block">
           <ShuffleText charFrameTime={200} content="K" />
         </h1>
 
         <button
           type="submit"
-          className=" btn btn-outline border-white text-white hover:border-primary hover:bg-primary mt-20 lg:mt-5 w-full lg:w-1/2 mx-auto "
+          className="btn btn-outline mx-auto mt-20 w-full border-white text-white hover:border-primary hover:bg-primary lg:mt-5 lg:w-1/2"
         >
           Submit
         </button>

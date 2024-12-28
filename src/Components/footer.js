@@ -47,10 +47,10 @@ const Footer = () => {
   const isContactRoute = location.pathname === "/contact";
   return (
     <div
-      className={` grotesk lg:p-20 py-20 px-5  ${
+      className={`grotesk px-5 py-20 lg:p-20 ${
         isProjectsRoute || isContactRoute
-          ? "bg-[#141517] text-white -mt-1"
-          : "bg-white text-black mt-7"
+          ? "-mt-1 bg-[#141517] text-white"
+          : "mt-7 bg-white text-black"
       }`}
     >
       {/*  */}
@@ -75,20 +75,20 @@ const Footer = () => {
       {/*  */}
 
       <div className="">
-        <h1 className="lg:text-6xl text-3xl font-bold grotesk ">
+        <h1 className="grotesk text-3xl font-bold lg:text-6xl">
           Contact Information
         </h1>
       </div>
-      <div className="lg:flex justify-between items-center lg:space-y-0 space-y-7  mt-9">
+      <div className="mt-9 items-center justify-between space-y-7 lg:flex lg:space-y-0">
         <div className="text-3xl">
           <h1>Socials</h1>
-          <div className="flex gap-4 mt-4 ">
+          <div className="mt-4 flex gap-4">
             <FaTelegram className="hover:text-primary" />
             <FaLinkedin className="hover:text-primary" />
           </div>
         </div>
         <div>
-          <h1 className="text-3xl mb-3">Email</h1>
+          <h1 className="mb-3 text-3xl">Email</h1>
           <code className="text-xl lg:text-2xl">jostackservices@gmail.com</code>
         </div>
         <div>
@@ -98,11 +98,11 @@ const Footer = () => {
               isProjectsRoute || isContactRoute
                 ? "border-white text-white hover:border-primary hover:bg-primary"
                 : "btn-primary"
-            } text-xl lg:text-2xl w-full`}
+            } w-full text-xl lg:text-2xl`}
           >
             Get In Touch
           </CustomLink>
-          <p className="lg:text-lg mt-2">
+          <p className="mt-2 lg:text-lg">
             © 2024 Jostack Services. All rights reserved
           </p>
         </div>

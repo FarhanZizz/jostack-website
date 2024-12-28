@@ -26,28 +26,28 @@ const Founders = () => {
       {
         top: "-50%",
       },
-      "a"
+      "a",
     )
       .to(
         ".bottom",
         {
           bottom: "-50%",
         },
-        "a"
+        "a",
       )
       .to(
         ".top-h",
         {
           top: "80%",
         },
-        "a"
+        "a",
       )
       .to(
         ".bottom-h",
         {
           bottom: "60%",
         },
-        "a"
+        "a",
       )
 
       .to(
@@ -55,40 +55,40 @@ const Founders = () => {
         {
           marginTop: "0",
         },
-        "a"
+        "a",
       );
   });
 
   return (
-    <div className="main  relative bg-white overflow-hidden z-0 my-20">
+    <div className="main relative z-0 my-20 overflow-hidden bg-white">
       {/* top */}
-      <div className="top bg-[#141517]  h-[50%] w-full absolute top-[0%] overflow-hidden ">
-        <h1 className="top-h flex justify-center relative lg:top-[17rem] top-[88.22%] lg:text-[250px] text-[70px] grotesk font-bold text-white">
+      <div className="top absolute top-[0%] h-[50%] w-full overflow-hidden bg-[#141517]">
+        <h1 className="top-h grotesk relative top-[88.22%] flex justify-center text-[70px] font-bold text-white lg:top-[17rem] lg:text-[250px]">
           FOUNDERS
         </h1>
       </div>
 
       {/* center */}
-      <div className="center bg-white w-full h-[100vh] overflow-hidden   ">
+      <div className="center h-[100vh] w-full overflow-hidden bg-white">
         {/* content  */}
         <div className="content mt-[50%]">
           {/* ratib */}
 
-          <div className=" flex gap-20 items-center justify-center ">
+          <div className="flex items-center justify-center gap-20">
             {/* image of Founder */}
 
             <div>
-              <div className="  border-primary border-[8px] p-3 rounded-full ">
-                <div className="h-56 w-56 bg-slate-900 rounded-full">
+              <div className="rounded-full border-[8px] border-primary p-3">
+                <div className="h-56 w-56 rounded-full bg-slate-900">
                   <img
                     alt="Ratib"
                     src={ratib}
-                    className="h-56 w-56 bg-slate-900 rounded-full"
+                    className="h-56 w-56 rounded-full bg-slate-900"
                   ></img>
                 </div>
               </div>
 
-              <div className=" flex gap-5 justify-center items-center mt-6  text-[20px]">
+              <div className="mt-6 flex items-center justify-center gap-5 text-[20px]">
                 <p>Ratib</p>
                 <BiLogoGmail />
                 <FaLinkedin />
@@ -97,7 +97,7 @@ const Founders = () => {
 
             {/* contents of Founder */}
 
-            <div className=" f-details  space-y-3 capitalize ">
+            <div className="f-details space-y-3 capitalize">
               {/* <p> Hi  || I am ratib   </p> */}
               <p>
                 {" "}
@@ -119,7 +119,7 @@ const Founders = () => {
                 “Crafting the future, one line of code at a time”{" "}
               </p>
 
-              <div className=" h-[0.5px] w-full bg-slate-950 rounded-xl"></div>
+              <div className="h-[0.5px] w-full rounded-xl bg-slate-950"></div>
               <div>
                 <p>CEO & Founder</p>
               </div>
@@ -128,10 +128,10 @@ const Founders = () => {
 
           {/* mukto */}
 
-          <div className=" flex gap-20 mt-20  items-center justify-center">
+          <div className="mt-20 flex items-center justify-center gap-20">
             {/* contents of Founder */}
 
-            <div className="space-y-4 capitalize mx-w-xl ">
+            <div className="mx-w-xl space-y-4 capitalize">
               <p>
                 with early experience in the industry, working alongside
                 establish companies , farhan brings a wealth{" "}
@@ -150,7 +150,7 @@ const Founders = () => {
                 precision"
               </p>
 
-              <div className="h-[0.5px] w-full bg-slate-950 rounded-xl"></div>
+              <div className="h-[0.5px] w-full rounded-xl bg-slate-950"></div>
               <div className="items-end">
                 <p>COO & Founder</p>
               </div>
@@ -158,17 +158,17 @@ const Founders = () => {
 
             {/* image of Founder */}
             <div>
-              <div className="  border-primary border-[8px] p-3 rounded-full ">
+              <div className="rounded-full border-[8px] border-primary p-3">
                 <div className="">
                   <img
                     alt="Farhan"
                     src={farhan}
-                    className="h-56 w-56 bg-slate-900 rounded-full"
+                    className="h-56 w-56 rounded-full bg-slate-900"
                   ></img>
                 </div>
               </div>
 
-              <div className=" flex gap-5 justify-center items-center mt-6 text-[20px] ">
+              <div className="mt-6 flex items-center justify-center gap-5 text-[20px]">
                 <p>Farhan</p>
                 <BiLogoGmail />
                 <FaLinkedin />
@@ -179,8 +179,8 @@ const Founders = () => {
       </div>
 
       {/* bottom */}
-      <div className="bottom bg-[#141517] w-full h-[50vh] absolute bottom-[0%] overflow-hidden">
-        <h1 className="bottom-h flex justify-center relative lg:bottom-[13rem] bottom-[5rem] lg:text-[250px] text-[70px] grotesk font-bold text-white">
+      <div className="bottom absolute bottom-[0%] h-[50vh] w-full overflow-hidden bg-[#141517]">
+        <h1 className="bottom-h grotesk relative bottom-[5rem] flex justify-center text-[70px] font-bold text-white lg:bottom-[13rem] lg:text-[250px]">
           FOUNDERS
         </h1>
       </div>

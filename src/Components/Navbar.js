@@ -32,20 +32,18 @@ const Navbar = () => {
         zIndex: 50,
         transition: "color 0.3s ease, background-color 0.3s ease",
       }}
-      className={` flex justify-between lg:px-20 bg-none py-3 px-5 items-center
-      ${
+      className={`flex items-center justify-between bg-none px-5 py-3 lg:px-20 ${
         isProjectsRoute || isContactRoute
           ? "bg-[#141517] text-white"
           : "bg-white text-black"
-      }
-    `}
+      } `}
     >
       <div className="">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="svg h-5 w-5 hamburger"
+              className="svg hamburger h-5 w-5"
               fill="none"
               viewBox="0 0 24 24"
               stroke={isProjectsRoute || isContactRoute ? "white" : "#281046"}
@@ -60,7 +58,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu dropdown-content bg-primary text-white  z-[1] mt-3 w-52 shadow-2xl text-lg "
+            className="menu dropdown-content z-[1] mt-3 w-52 bg-primary text-lg text-white shadow-2xl"
           >
             <li className="hover:bg-white hover:text-primary focus:text-white">
               <CustomLink to="/">Home</CustomLink>
@@ -75,7 +73,7 @@ const Navbar = () => {
           to="/"
           className={`jostack text-2xl ${
             isProjectsRoute || isContactRoute ? "text-white" : "text-primary"
-          } uppercase font-bold`}
+          } font-bold uppercase`}
         >
           jostack .
         </CustomLink>
@@ -84,28 +82,24 @@ const Navbar = () => {
         <ul
           className={`flex gap-10 ${
             isProjectsRoute || isContactRoute ? "text-white" : "text-primary"
-          } uppercase font-medium`}
+          } font-medium uppercase`}
         >
           <li
-            className={`border-b-3 border-transparent relative transition-all duration-600 ease-linear 
-              after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] ${
-                isProjectsRoute || isContactRoute
-                  ? "after:bg-white"
-                  : "after:bg-primary"
-              }
-              after:w-0 after:transition-all hover:after:w-full p-1`}
+            className={`border-b-3 duration-600 relative border-transparent transition-all ease-linear after:absolute after:bottom-0 after:left-0 after:h-[3px] after:content-[''] ${
+              isProjectsRoute || isContactRoute
+                ? "after:bg-white"
+                : "after:bg-primary"
+            } p-1 after:w-0 after:transition-all hover:after:w-full`}
           >
             <CustomLink to="/">Home</CustomLink>
           </li>
 
           <li
-            className={`border-b-3 border-transparent relative transition-all duration-600 ease-linear 
-              after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] ${
-                isProjectsRoute || isContactRoute
-                  ? "after:bg-white"
-                  : "after:bg-primary"
-              }
-              after:w-0 after:transition-all hover:after:w-full p-1`}
+            className={`border-b-3 duration-600 relative border-transparent transition-all ease-linear after:absolute after:bottom-0 after:left-0 after:h-[3px] after:content-[''] ${
+              isProjectsRoute || isContactRoute
+                ? "after:bg-white"
+                : "after:bg-primary"
+            } p-1 after:w-0 after:transition-all hover:after:w-full`}
           >
             <CustomLink to="/projects">Projects</CustomLink>
           </li>
@@ -114,7 +108,7 @@ const Navbar = () => {
       <div className="">
         <CustomLink
           to="/contact"
-          className="rounded-3x bg-primary px-3 py-1 rounded-xl text-white flex items-center gap-3"
+          className="rounded-3x flex items-center gap-3 rounded-xl bg-primary px-3 py-1 text-white"
         >
           Contact <FaArrowAltCircleRight />
         </CustomLink>

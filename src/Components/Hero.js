@@ -45,28 +45,28 @@ const Hero = () => {
   };
 
   return (
-    <div className="lg:flex justify-between lg:px-20 py-28 2xl:py-44  px-5">
-      <div className="hero-title lg:text-left text-center grotesk ">
-        <h1 className="lg:text-8xl 2xl:text-9xl text-5xl font-bold uppercase">
+    <div className="justify-between px-5 py-28 lg:flex lg:px-20 2xl:py-44">
+      <div className="hero-title grotesk text-center lg:text-left">
+        <h1 className="text-5xl font-bold uppercase lg:text-8xl 2xl:text-9xl">
           TRANSFORMING IDEAS <br /> INTO DIGITAL <br /> REALITY
         </h1>
       </div>
 
       <div className="hero-details">
-        <div className="svg lg:mb-20 2xl:w-[250px] 2xl:h-[250px] h-[225px] w-[225px] mx-auto">
+        <div className="svg mx-auto h-[225px] w-[225px] lg:mb-20 2xl:h-[250px] 2xl:w-[250px]">
           <Lottie options={defaultOptions} />
         </div>
-        <div className="text-xl lg:text-left text-center lg:p-0 p-4 max-w-xl capitalize">
+        <div className="max-w-xl p-4 text-center text-xl capitalize lg:p-0 lg:text-left">
           <p>
             At Jostack, we transform your ideas into digital reality with expert
             website creation, management and branding. Explore our wide range of
             IT services designed to elevate your business in the digital world.
           </p>
         </div>
-        <div className="flex items-center lg:justify-normal justify-center lg:mt-4">
+        <div className="flex items-center justify-center lg:mt-4 lg:justify-normal">
           <CustomLink
             to="/contact"
-            className="btn-hero rounded-3x bg-primary px-3 py-1 rounded-xl text-white flex items-center gap-3"
+            className="btn-hero rounded-3x flex items-center gap-3 rounded-xl bg-primary px-3 py-1 text-white"
           >
             Contact <FaArrowAltCircleRight />{" "}
           </CustomLink>

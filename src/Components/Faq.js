@@ -84,7 +84,7 @@ const Faq = () => {
       >
         <div
           id="rounded-div"
-          className="absolute left-[50%] h-[750%] w-[150%] -translate-x-[50%] overflow-hidden rounded-[50%] bg-white"
+          className="absolute left-[50%] h-[750%] w-[250%] -translate-x-[50%] overflow-hidden rounded-[50%] bg-white lg:w-[150%]"
         ></div>
       </div>
 

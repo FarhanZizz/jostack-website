@@ -18,7 +18,7 @@ const Founders = () => {
         start: "top top",
         end: "+=150%",
         scrub: 2,
-        pin: true,
+        // pin: true,
       },
     });
     tl.to(

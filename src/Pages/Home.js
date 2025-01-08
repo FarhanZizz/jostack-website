@@ -5,7 +5,7 @@ import Newsletter from "../Components/Newsletter";
 import About from "../Components/About";
 import Faq from "../Components/Faq";
 import Founders from "../Components/Founders";
-import Footer from "../Components/footer";
+
 const Home = () => {
   return (
     <div>
@@ -15,7 +15,9 @@ const Home = () => {
         <Services />
       </div>
       <Faq />
-      <Founders />
+      {/* out of service 
+       <Founders /> 
+       */}
       <Newsletter />
     </div>
   );

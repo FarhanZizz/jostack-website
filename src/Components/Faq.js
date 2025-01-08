@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -7,10 +7,13 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 const Faq = () => {
-  const handleFaqToggle = () => {
-    setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 200);
+  const handleFaqToggle = (index) => {
+    const allCheckboxes = document.querySelectorAll(".collapse input");
+    allCheckboxes.forEach((checkbox, i) => {
+      if (i !== index) {
+        checkbox.checked = false;
+      }
+    });
   };
   useGSAP(() => {
     var tl = gsap.timeline({
@@ -116,7 +119,7 @@ const Faq = () => {
           </div>
           <div className="mt-10 grid grid-cols-1 gap-5 lg:mt-0 lg:gap-10 2xl:gap-20">
             <div className="faq-1 collapse collapse-plus rounded-none border-b-4 border-white">
-              <input type="checkbox" onClick={() => handleFaqToggle()} />
+              <input type="checkbox" onClick={() => handleFaqToggle(0)} />
               <div className="collapse-title text-lg font-medium lg:text-2xl 2xl:text-3xl">
                 What services does Jostack offer?
               </div>
@@ -131,7 +134,7 @@ const Faq = () => {
               </div>
             </div>
             <div className="faq-2 collapse collapse-plus rounded-none border-b-4 border-white">
-              <input type="checkbox" onClick={() => handleFaqToggle()} />
+              <input type="checkbox" onClick={() => handleFaqToggle(1)} />
               <div className="collapse-title text-lg font-medium lg:text-2xl 2xl:text-3xl">
                 What is the process for starting a project?
               </div>
@@ -144,7 +147,7 @@ const Faq = () => {
               </div>
             </div>
             <div className="faq-3 collapse collapse-plus rounded-none border-b-4 border-white">
-              <input type="checkbox" onClick={() => handleFaqToggle()} />
+              <input type="checkbox" onClick={() => handleFaqToggle(2)} />
               <div className="collapse-title text-lg font-medium lg:text-2xl 2xl:text-3xl">
                 Can Jostack manage my website?
               </div>
@@ -158,7 +161,7 @@ const Faq = () => {
               </div>
             </div>
             <div className="faq-4 collapse collapse-plus rounded-none border-b-4 border-white">
-              <input type="checkbox" onClick={() => handleFaqToggle()} />
+              <input type="checkbox" onClick={() => handleFaqToggle(3)} />
               <div className="collapse-title text-lg font-medium lg:text-2xl 2xl:text-3xl">
                 How long does a website project take?
               </div>

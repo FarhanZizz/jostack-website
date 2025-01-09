@@ -54,7 +54,7 @@ const Services = () => {
         .to("#card-2", { top: "130%" }, "a")
         .to("#card-2", { top: "42%" }, "b")
         .to("#card-3", { top: "130%" }, "b")
-        .to("#card-3", { top: "50%" }, "c");
+        .to("#card-3", { top: "49%" }, "c");
     });
 
     return () => mm.revert(); // Clean up on unmount

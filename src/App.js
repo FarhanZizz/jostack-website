@@ -150,13 +150,12 @@ function App() {
                 <ShuffleText
                   charIncInterval={100}
                   charFrameTime={80}
-                  content={
-                    nextPath === "/"
+                  content={(() => {
+                    const path = nextPath.split("?")[0]; // Extract the base path
+                    return path === "/"
                       ? "Home"
-                      : nextPath
-                          .slice(1)
-                          .replace(/^./, nextPath[1].toUpperCase())
-                  }
+                      : path.slice(1).replace(/^./, path[1].toUpperCase()); // Format the path
+                  })()}
                 />
               </h1>
             </motion.div>

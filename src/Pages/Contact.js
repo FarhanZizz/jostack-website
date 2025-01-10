@@ -74,7 +74,7 @@ const Contact = () => {
     <form
       ref={formRef}
       onSubmit={handleSubmit}
-      className="-mt-1 grid-cols-3 justify-between bg-[#141517] p-5 py-28 text-white lg:grid lg:px-20 lg:py-32"
+      className="grid-cols-3 justify-between bg-[#141517] p-5 py-28 text-white lg:grid lg:px-20 lg:py-32"
     >
       <section className="text-contact col-span-2">
         <h1 className="text-3xl font-semibold capitalize lg:text-6xl">

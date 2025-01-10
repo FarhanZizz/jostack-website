@@ -1,9 +1,11 @@
 import React from "react";
 import { FaArrowAltCircleRight } from "react-icons/fa";
+import EmerlyLark from "../Projects/Emerlylark";
+import Styleus from "../Projects/Styleus";
 const Projects = () => {
   return (
     <div>
-      <div className="-mt-1 bg-[#141517] p-5 py-28 text-white lg:px-20 lg:py-32">
+      <div className="bg-[#141517] p-5 py-28 text-white lg:px-20 lg:py-32">
         <h1 className="text-3xl font-semibold capitalize lg:text-6xl">
           Our Projects
         </h1>
@@ -13,12 +15,22 @@ const Projects = () => {
           approach and solutions.
         </p>
 
-        <section className="card mt-20 max-w-[1250px] space-y-10">
-          {/* card - 1 */}
+        <div className="space-y-24 pt-24">
+          <EmerlyLark />
+          <hr />
+          <Styleus />
+          <h1 className="text-center text-3xl">
+            Stay tuned, more exciting projects are on the way!
+          </h1>
+        </div>
+        {/* <section className="card mt-20 max-w-[1250px] space-y-10">
           <div className="card-1 items-center justify-between gap-7 rounded-2xl bg-primary p-5 text-[#ffffffb0] hover:bg-[#23094394] lg:flex lg:h-64 lg:w-[1000px]">
-            {/* img */}
-            <div className="image h-60 w-full rounded-2xl bg-[#ffffffb0] delay-100 duration-300 hover:z-10 lg:h-56 lg:w-[50%] lg:hover:h-96 lg:hover:w-full"></div>
-            {/* content */}
+            <img
+              src={Emerlylark}
+              alt="EmerlyLark Project"
+              className="image h-60 w-full rounded-2xl bg-[#ffffffb0] delay-100 duration-300 hover:z-10 lg:h-56 lg:w-[50%] lg:hover:h-96 lg:hover:w-full"
+            />
+
             <div className="content-div space-y-4">
               <h1 className="project-title mt-4 text-3xl font-bold lg:mt-0 lg:text-4xl">
                 Portfolio
@@ -36,11 +48,9 @@ const Projects = () => {
             </div>
           </div>
 
-          {/* card - 2 */}
           <div className="card-1 items-center justify-between gap-7 rounded-2xl bg-primary p-5 text-[#ffffffb0] hover:bg-[#23094394] lg:flex lg:h-64 lg:w-[1000px]">
-            {/* img */}
             <div className="image h-60 w-full rounded-2xl bg-[#ffffffb0] delay-100 duration-300 hover:z-10 lg:h-56 lg:w-[50%] lg:hover:h-96 lg:hover:w-full"></div>
-            {/* content */}
+
             <div className="content-div space-y-4">
               <h1 className="project-title mt-4 text-3xl font-bold lg:mt-0 lg:text-4xl">
                 Portfolio
@@ -58,11 +68,9 @@ const Projects = () => {
             </div>
           </div>
 
-          {/* card - 3 */}
           <div className="card-1 items-center justify-between gap-7 rounded-2xl bg-primary p-5 text-[#ffffffb0] hover:bg-[#23094394] lg:flex lg:h-64 lg:w-[1000px]">
-            {/* img */}
             <div className="image h-60 w-full rounded-2xl bg-[#ffffffb0] delay-100 duration-300 hover:z-10 lg:h-56 lg:w-[50%] lg:hover:h-96 lg:hover:w-full"></div>
-            {/* content */}
+
             <div className="content-div space-y-4">
               <h1 className="project-title mt-4 text-3xl font-bold lg:mt-0 lg:text-4xl">
                 Portfolio
@@ -79,7 +87,7 @@ const Projects = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
     </div>
   );

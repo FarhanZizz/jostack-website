@@ -13,7 +13,7 @@ const Founders = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".main",
-        scroller: ".smooth-scroll",
+
         // markers: true ,
         start: "top top",
         end: "+=150%",

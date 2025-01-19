@@ -18,7 +18,7 @@ const Services = () => {
       const tlMobile = gsap.timeline({
         scrollTrigger: {
           trigger: ".service-main",
-          scroller: ".smooth-scroll",
+
           start: "top top",
           end: "+=200%",
           scrub: 3,
@@ -40,7 +40,7 @@ const Services = () => {
       const tlDesktop = gsap.timeline({
         scrollTrigger: {
           trigger: ".service-main",
-          scroller: ".smooth-scroll",
+
           start: "top top",
           end: "+=200%",
           scrub: 3,

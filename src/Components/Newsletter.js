@@ -27,7 +27,7 @@ const Newsletter = () => {
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".Newsletter",
-        scroller: ".smooth-scroll",
+
         start: "-10% 70%",
         end: "50% 50%",
       },

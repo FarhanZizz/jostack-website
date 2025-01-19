@@ -22,7 +22,7 @@ const Contact = () => {
     var tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".form",
-        scroller: ".smooth-scroll",
+
         start: "-10% 70%",
         end: "50% 50%",
       },

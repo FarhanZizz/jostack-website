@@ -19,7 +19,7 @@ const Faq = () => {
     var tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#FAQ",
-        scroller: ".smooth-scroll",
+
         start: "-10% 70%",
         end: "50% 50%",
         scrub: 1,
@@ -34,7 +34,7 @@ const Faq = () => {
     var tl2 = gsap.timeline({
       scrollTrigger: {
         trigger: ".chat-container",
-        scroller: ".smooth-scroll",
+
         start: "top top",
         end: "+=1500",
         scrub: true,
@@ -62,7 +62,7 @@ const Faq = () => {
     var faqTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: ".faq-container",
-        scroller: ".smooth-scroll",
+
         start: "top 80%",
         end: "bottom 80%",
         scrub: 1,

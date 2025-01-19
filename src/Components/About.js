@@ -8,7 +8,7 @@ const About = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".about-section",
-        scroller: ".smooth-scroll",
+
         start: "top top",
         end: "+=400%",
         scrub: 4,
